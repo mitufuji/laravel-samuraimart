@@ -1,0 +1,67 @@
+[composer dump-autoload]
+このコマンドを実行すると、Vender配下のとあるファイルに全ての*.phpファイルのパスが自動的に記述されます。
+
+vender > laravel > framework > src > Illuminate にseeder.phpはある
+
+Composerのオートローダを再生成するために以下コマンドを実行
+これをやらないと作成したクラスがオートローダに反映されない
+
+[composer require laravel/ui]
+Laravel UIは認証周りの機能の雛型を生成してくれるLaravel公式のライブラリ
+
+Scaffolding 骨組み スキャフォールド　
+
+[php artisan ui bootstrap --auth]
+
+auth(認証) 次にui Artisanコマンドを使いフロントエンドのスカフォールドをインストールします。
+ここでオプションに認証機能をつけると自動で必要なファイルを自動で生成してくれます
+こちらのコマンドで認証機能のスキャフォールドが導入できてルーティングauthControllerなどのファイルが
+自動生成されましたが、bootstrap自体は足場を作っただけでダウンロードできてないのでしていきます。
+
+[[ WARN  Please run [npm install && npm run dev] to compile your fresh scaffolding. ]]
+
+compile 編集する
+
+npm とはNode.jsのパッケージを管理するシステム、所謂パッケージ管理システムです。
+アプリケーションを作成する際、便利なパッケージをそのプロジェクトにインストールして、使用することができます。
+
+npm はパッケージの依存関係を管理できる
+
+Laravelでよく使うnpm(Node package manager)はNode.jsをインストールした時に
+同時にインストールされているパッケージ管理ツールです。Node.jsはサーバーサイド側で動くJavaScriptで
+コマンドラインから命令を実行することで動作させます。
+
+laravelではJavaScriptのパッケージ管理サービスであるnpmと連携することができて
+必要なソースコードを自動ダウンロードして依存関係を自動的に解決してくれます。
+
+
+
+まず前提としてLaravel 5.8以前ではフロントエンド フレームワークとしてbootstrapとVueがはじめから利用可能なように
+設定されていましたが、Laravel 6.xではデフォルトでは含まれなくなりました。
+6.x以上ででBootstrapを利用するには、フロントエンドのScafolding機能を提供するlaravel/uiのコマンドを使用して
+JavascriptのビルドとCSSのプリプロセッサ設定を生成する必要があります。
+
+npm run dev
+
+開発用(開発：developer)のビルドコマンドです。
+コマンドを実行するたびに現在のプロジェクトをビルド(コンパイル)してくれます。
+ビルドが具体的に何をしているのか。それはファイルのコンパイルと圧縮です。
+
+コンパイルとは元のソースコードをより機械が理解しやすい形に成形することを指します。
+例えばSass(cssを簡単に書ける言語)で書いたファイルがあるとします。
+しかし書かれているのはブラウザが理解できるcssの文法ではなく、Sass独特の文法なのでこのままではブラウザが理解してくれません。
+このファイルをコンパイルすることで独特の文法をcssの見慣れた文法(ブラウザが理解できる文法)に変換してくれるのです。
+
+
+
+
+<!-- ディレクティブ@yield@extends@section-@endsection -->
+<!-- @section()を@yield()記入場所に表示させる -->
+<!-- その際継承先を@section側に@extendas()で記す--> login.blade.phpのメモ　なぜか@yield@extends@section-@endsection
+に反応してエラー出る
+
+jewi telg cgll xnbr  google　アプリパスワード
+
+mial host名　 MAIL_PORTは検索したら出てくる
+SMTPとはSimple Mail Transfer Protocolの略で、メールを送信するために利用する通信プロトコル
+Gmail では可能な場合、メールを自動的に暗号化してユーザーの情報を保護します。 暗号化によってメールはコードに変換された状態で送信されます。 これは Transport Layer Security（TLS）というセキュリティ ツールの機能であり、メールが第三者に見られることを防ぐのに役立ちます。

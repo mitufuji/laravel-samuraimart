@@ -73,7 +73,10 @@ class ProductController extends Controller
     public function show(Product $product){
         
         // 引数をcompactで配列化
-        return view('products.show',compact('product'));
+   
+        $reviews = $product->reviews()->get();
+
+        return view('products.show', compact('product', 'reviews'));
     }
 
     /**

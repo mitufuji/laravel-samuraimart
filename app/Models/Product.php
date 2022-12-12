@@ -14,4 +14,9 @@ class Product extends Model
         // 子テーブルで親テーブルのリレーション定義　今回　1対1
         return $this->belongTo('App\Models\category');
     }
+    // productからみてreviewは多　だからs
+    public function reviews()
+    {
+        return $this->hasMany('App\Models\Review');
+    }
 }

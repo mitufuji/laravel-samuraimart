@@ -6,7 +6,7 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
+    
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Fonts -->
@@ -27,6 +27,8 @@
         <main class="py-4 mb-5">
             @yield('content')
         </main>
+        @component('components.footer')
+        @endcomponent
     </div>
 </body>
 </html>

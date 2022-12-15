@@ -10,10 +10,11 @@ use Laravel\Sanctum\HasApiTokens;
 // メール認証を有効にする
 use App\Notifications\CustomVerifyEmail;
 use App\Notifications\CustomResetPassword;
+use Overtrue\LaravelFavorite\Traits\Favoriter;
 // アカウント作成時にメール送信
 class User extends Authenticatable implements MustVerifyEmail
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasApiTokens, HasFactory, Notifiable, Favoriter;
     // メール認証を有効にする
     public function sendEmailVerificationNotification()
     {
@@ -33,6 +34,9 @@ class User extends Authenticatable implements MustVerifyEmail
         'name',
         'email',
         'password',
+        'postal_code',
+        'address',
+        'phone'
     ];
 
     /**

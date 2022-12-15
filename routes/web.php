@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 // 使うコントローラー指定する
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\UserCountroller;
 use App\Http\Controllers\ReviewController;
 
 /*
@@ -19,8 +20,15 @@ use App\Http\Controllers\ReviewController;
 Route::get('/', function () {
     return view('welcome');
 });
-
+// Route::contoroller(共通のコントローラー)->group(function(){})
+Route::controller(UserCountroller::class)->group(function() {
+    Route::get('users/mypage','mypage')->name('mypage');
+    Route::get('users/mypage/edit','edit')->name('mypage.edit');
+    Route::put('users/mypage','update')->name('mypage.update');
+});
 Route::post('reviews',[ReviewController::class,'store'])->name('reviews.store');
+
+Route::get('products/{product}/favorite',[ProductController::class,'favorite'])->name('products.favorite');
 // resource　CRUDのルーティングを一度にできる。
 // 本来は　Route::HTTPリクエストメソッド名('URL', [コントローラ名::class, 'アクション名'])->name('ルートの名前');
 // middlewareHTTPリクエストが送られたタイミングで実行される処理を定義できる機能

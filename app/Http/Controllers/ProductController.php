@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
@@ -14,7 +15,7 @@ class ProductController extends Controller
      * @return \Illuminate\Http\Response
      * 
      */
-    public function index(){
+    public function index(Request $request){
         // 引数ないため、Productsテーブル全て習得。この状態は単純に値を習得してるだけで、配列ではない。配列にするには、
         // $products = Product::all()->toArray();
         // view()ヘルパー　引数のviewとして指定する。ページ（URL）ではない
@@ -22,10 +23,25 @@ class ProductController extends Controller
         // compact()関数　引数を配列にする
         // 引数$products（productテーブル）の情報を全て配列にする　
         // [id=>'1' name=>'本' price=>'2000']
-        $products = Product::all();
+
+        // productモデルのデータベースを15件ずつ、ページネーションで表示
+        if($request->category !== null){
+            // whereテーブルから条件にあてはまるものを抽出
+            $products = Product::where('category_id', $request->category)->sortable()->paginate(15);
+            // Product::where('category_id',$request->category)の実行回数
+            $total_count = Product::where('category_id',$request->category)->count();
+            $category = Category::find($request->category);
+        }else{
+            $products = Product::sortable()->paginate(15);
+            $total_count = "";
+            $category = null;
+        }
+        $categories = Category::all();
+        // Categoryからmajor_category_namesのみ取り出す（pluck）　uniqueで重複部分を削除
+        $major_category_names = Category::pluck('major_category_name')->unique();
       
        
-        return view('products.index', compact('products'));
+        return view('products.index', compact('products', 'category','categories', 'major_category_names','total_count'));
     }
 
     /**
@@ -126,5 +142,13 @@ class ProductController extends Controller
         //ここに来るまでに$productはidを送信して指定されている。例 index.blade.php
         //引数はProductクラスの指定されたidを持つ値
         return to_route('products.index');
+    }
+
+    public function favorite(Product $product)
+    {
+        // ログイン中のユーザーがお気に入りしてなければ登録、してれば解除できるらしい
+        Auth::user()->togglefavorite($product);
+
+        return back();
     }
 }

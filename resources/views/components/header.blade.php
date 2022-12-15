@@ -42,15 +42,9 @@
          <!-- ログイン済みの処理 -->
          @else
          <li class="nav-item mr-5">
-            <!-- クリックしたら 'logout-form'取得して送信し-->
-           <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-             ログアウト
+           <a class="nav-link" href="{{ route('mypage') }}">
+             <i class="fas fa-user mr-1"></i><label>マイページ</label>
            </a>
-            <!-- "display: none;"で見せてない　<li>内でformでroute飛んでる　POSTしてるdocument.getElementById('logout-form')を
-                上のリンククリックしたらsubmitする内容がこれ　 -->
-           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-             @csrf
-           </form>
          </li>
          @endguest
        </ul>

@@ -25,16 +25,25 @@ class ProductController extends Controller
         // [id=>'1' name=>'本' price=>'2000']
 
         // productモデルのデータベースを15件ずつ、ページネーションで表示
+
         if($request->category !== null){
             // whereテーブルから条件にあてはまるものを抽出
-            $products = Product::where('category_id', $request->category)->sortable()->paginate(15);
+            $products = Product::where('category_id', $request->category)
+                          ->orderBy("price","desc")                
+                          ->sortable()
+                          ->paginate(15);
             // Product::where('category_id',$request->category)の実行回数
             $total_count = Product::where('category_id',$request->category)->count();
             $category = Category::find($request->category);
         }else{
-            $products = Product::sortable()->paginate(15);
+            
+            $products = Product::sortable()
+                         ->orderBy("price","desc")
+                         ->paginate(15);
+                         
             $total_count = "";
             $category = null;
+            // logger('elseproducts');
         }
         $categories = Category::all();
         // Categoryからmajor_category_namesのみ取り出す（pluck）　uniqueで重複部分を削除

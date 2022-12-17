@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Product;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
@@ -50,6 +51,34 @@ public function mypage()
         $user->update();
 
         return to_route('mypage');
+    }
+
+    public function update_password(Request $request)
+    {
+        $user = Auth::user();
+        
+        if($request->input('password') == $request->input('password_confirmation')){
+            // bcrypt ハッシュ化
+            $user->password = bcrypt($request->input('password'));
+            $user->update();
+        }else{
+            // 異なっててもページ戻るだけ？？エラー表示無し
+            return to_route('mypage');
+        }
+    }
+
+    public function edit_password()
+    {
+        return view('users.edit_password');
+    }
+
+    public function favorite()
+    {
+        $user = Auth::user();
+        // ？？？？？
+        $favorites = $user->favorites(Product::class)->get();
+
+        return view('users.favorite', compact('favorites'));
     }
 
 

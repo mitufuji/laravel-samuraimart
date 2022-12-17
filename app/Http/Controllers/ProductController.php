@@ -147,6 +147,7 @@ class ProductController extends Controller
     public function favorite(Product $product)
     {
         // ログイン中のユーザーがお気に入りしてなければ登録、してれば解除できるらしい
+        // Githubにおいてあった
         Auth::user()->togglefavorite($product);
 
         return back();

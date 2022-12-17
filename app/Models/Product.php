@@ -9,7 +9,7 @@ use Kyslik\ColumnSortable\Sortable;
 
 class Product extends Model
 {
-    use HasFactory, Favoriteable,Sortable;
+    use HasFactory, Favoriteable, Sortable;
 
     public function category()
     {

@@ -76,7 +76,8 @@ public function mypage()
     {
         $user = Auth::user();
         // ？？？？？
-        $favorites = $user->favorites(Product::class)->get();
+        $favorites = $user->favorites(Product::class)
+                          ->get();
 
         return view('users.favorite', compact('favorites'));
     }

@@ -15,9 +15,11 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             // defaultでは値は空
-            $table->string('postal_code')->default('');
+            $table->string('postal_code')
+                  ->default('');
             $table->text('address');
-            $table->string('phone')->default('');
+            $table->string('phone')
+                  ->default('');
         });
     }
 

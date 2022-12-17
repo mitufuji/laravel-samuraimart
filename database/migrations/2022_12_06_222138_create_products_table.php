@@ -19,8 +19,10 @@ return new class extends Migration
             $table->string('name');
             $table->text('description');
             // unsigned()　マイナス値を入れれないようにする
-            $table->integer('price')->unsigned();
-            $table->integer('category_id')->unsinged();
+            $table->integer('price')
+                  ->unsigned();
+            $table->integer('category_id')
+                  ->unsinged();
             $table->timestamps();
         });
     }

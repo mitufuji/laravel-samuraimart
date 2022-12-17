@@ -1,6 +1,6 @@
 @extends('layouts.app')
  
- @section('content')
+@section('content')
  
 <div class="d-flex justify-content-center">
     <div class="row w-75">
@@ -94,4 +94,4 @@
         </div>
     </div>
 </div>
- @endsection
+@endsection

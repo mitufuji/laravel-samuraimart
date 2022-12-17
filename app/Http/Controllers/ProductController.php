@@ -29,17 +29,18 @@ class ProductController extends Controller
         if($request->category !== null){
             // whereテーブルから条件にあてはまるものを抽出
             $products = Product::where('category_id', $request->category)
-                          ->orderBy("price","desc")                
-                          ->sortable()
-                          ->paginate(15);
+                                ->orderBy("price","desc")                
+                                ->sortable()
+                                ->paginate(15);
             // Product::where('category_id',$request->category)の実行回数
-            $total_count = Product::where('category_id',$request->category)->count();
+            $total_count = Product::where('category_id',$request->category)
+                                   ->count();
             $category = Category::find($request->category);
         }else{
             
             $products = Product::sortable()
-                         ->orderBy("price","desc")
-                         ->paginate(15);
+                                ->orderBy("price","desc")
+                                ->paginate(15);
                          
             $total_count = "";
             $category = null;
@@ -47,7 +48,8 @@ class ProductController extends Controller
         }
         $categories = Category::all();
         // Categoryからmajor_category_namesのみ取り出す（pluck）　uniqueで重複部分を削除
-        $major_category_names = Category::pluck('major_category_name')->unique();
+        $major_category_names = Category::pluck('major_category_name')
+                                         ->unique();
       
        
         return view('products.index', compact('products', 'category','categories', 'major_category_names','total_count'));
@@ -81,7 +83,7 @@ class ProductController extends Controller
         $product->price = $request->input('price');
         $product->category_id = $request->input('category_id');
         // 最後はsave　updateでも可。updateのほうが使われる。
-        $product->save();
+        $product->update();
         //return to_route('products.index') データ保存後、リダイレクトする 
         return to_route('products.index');
 
@@ -99,7 +101,9 @@ class ProductController extends Controller
         
         // 引数をcompactで配列化
    
-        $reviews = $product->reviews()->get();
+        $reviews = $product
+                   ->reviews()
+                   ->get();
 
         return view('products.show', compact('product', 'reviews'));
     }
@@ -157,7 +161,8 @@ class ProductController extends Controller
     {
         // ログイン中のユーザーがお気に入りしてなければ登録、してれば解除できるらしい
         // Githubにおいてあった
-        Auth::user()->togglefavorite($product);
+        Auth::user()
+            ->togglefavorite($product);
 
         return back();
     }

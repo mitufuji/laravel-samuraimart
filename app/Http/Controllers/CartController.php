@@ -16,7 +16,8 @@ class CartController extends Controller
      */
     public function index()
     {
-        $cart = Cart::instance(Auth::user()->id)->content();
+        $cart = Cart::instance(Auth::user()->id)
+                    ->content();
  
         $total = 0;
 
@@ -35,7 +36,8 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
-        Cart::instance(Auth::user()->id)->add(
+        Cart::instance(Auth::user()->id)
+            ->add(
             [
                 'id' => $request->id, 
                 'name' => $request->name, 
@@ -58,15 +60,22 @@ class CartController extends Controller
      */
     public function destroy(Request $request)
     {
-        $user_shoppingcarts = DB::table('shoppingcart')->where('instance', Auth::user()->id)->get();
+        $user_shoppingcarts = DB::table('shoppingcart')
+                                ->where('instance', Auth::user()->id)
+                                ->get();
         $count = $user_shoppingcarts->count();
 
         $count += 1;
-        Cart::instance(Auth::user()->id)->store($count);
+        Cart::instance(Auth::user()->id)
+             ->store($count);
 
-        DB::table('shoppingcart')->where('instance', Auth::user()->id)->where('number', null)->update(['number' => $count, 'buy_flag' => true]);
+        DB::table('shoppingcart')
+           ->where('instance', Auth::user()->id)
+           ->where('number', null)
+           ->update(['number' => $count, 'buy_flag' => true]);
 
-        Cart::instance(Auth::user()->id)->destroy();
+        Cart::instance(Auth::user()->id)
+            ->destroy();
 
         return to_route('carts.index');
     }

@@ -15,7 +15,8 @@ return new class extends Migration
     {
         Schema::table('shoppingcart', function (Blueprint $table) {
             // boolean()真偽を返す
-            $table->boolean('buy_flag')->default(false);
+            $table->boolean('buy_flag')
+                  ->default(false);
         });
     }
 

@@ -26,7 +26,9 @@ class ReviewController extends Controller
         $review->content = $request->input('content');
         $review->product_id = $request->input('product_id');
         $review->user_id = Auth::user()->id;
-        $review->update();
+        $review->score = $request->input('score');
+        // updateでは機能しなかった
+        $review->save();
       //今まで表示してたページにリダイレクト　ルーティングするってこと？？ 
         return back();
     }

@@ -82,8 +82,8 @@ class ProductController extends Controller
         $product->description = $request->input('description');
         $product->price = $request->input('price');
         $product->category_id = $request->input('category_id');
-        // 最後はsave　updateでも可。updateのほうが使われる。
-        $product->update();
+        // 最後はsave　updateでは機能せず
+        $product->save();
         //return to_route('products.index') データ保存後、リダイレクトする 
         return to_route('products.index');
 

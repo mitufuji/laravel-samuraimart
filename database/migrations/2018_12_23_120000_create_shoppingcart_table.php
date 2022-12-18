@@ -15,7 +15,8 @@ class CreateShoppingcartTable extends Migration
             $table->string('identifier');
             $table->string('instance');
             $table->longText('content');
-            $table->integer('number')->nullable();
+            $table->integer('number')
+                  ->nullable();
             $table->nullableTimestamps();
 
             $table->primary(['identifier', 'instance']);

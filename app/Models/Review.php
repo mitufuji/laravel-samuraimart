@@ -9,6 +9,13 @@ class Review extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'content',
+        'product_id',
+        'user_id',
+        'score',
+    ];
+
     public function product()
     {
         return $this->belongsTo('App\Models\Product');
@@ -18,4 +25,5 @@ class Review extends Model
     {
         return $this->belongsTo('App\Models\User');
     }
+
 }

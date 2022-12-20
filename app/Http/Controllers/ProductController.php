@@ -7,6 +7,7 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+
 class ProductController extends Controller
 {
     /**
@@ -26,30 +27,37 @@ class ProductController extends Controller
 
         // productモデルのデータベースを15件ずつ、ページネーションで表示
 
+        
+        $paginate = config('const.paginate');
+        
         if($request->category !== null){
             // whereテーブルから条件にあてはまるものを抽出
             $products = Product::where('category_id', $request->category)
-                                ->orderBy("price","desc")                
-                                ->sortable()
-                                ->paginate(15);
+                ->orderBy('price', 'desc')                
+                ->sortable()
+                ->paginate($paginate);
             // Product::where('category_id',$request->category)の実行回数
-            $total_count = Product::where('category_id',$request->category)
-                                   ->count();
+            $total_count = Product::where('category_id', $request->category)
+                ->count();
             $category = Category::find($request->category);
         }else{
             
             $products = Product::sortable()
-                                ->orderBy("price","desc")
-                                ->paginate(15);
+                ->orderBy('price', 'desc')
+                ->paginate($paginate);
                          
             $total_count = "";
             $category = null;
-            // logger('elseproducts');
+            // logger($products);
+            // dd();
+        
         }
+
+        
         $categories = Category::all();
         // Categoryからmajor_category_namesのみ取り出す（pluck）　uniqueで重複部分を削除
         $major_category_names = Category::pluck('major_category_name')
-                                         ->unique();
+            ->unique();
       
        
         return view('products.index', compact('products', 'category','categories', 'major_category_names','total_count'));
@@ -102,8 +110,8 @@ class ProductController extends Controller
         // 引数をcompactで配列化
    
         $reviews = $product
-                   ->reviews()
-                   ->get();
+            ->reviews()
+            ->get();
 
         return view('products.show', compact('product', 'reviews'));
     }
@@ -138,7 +146,7 @@ class ProductController extends Controller
         $product->price = $request->input('price');
         $product->category_id = $request->input('category_id');
         // 入力内容をアップデート
-        $product->update();
+        $product->save();
         // to_route　は　redirect()->route('')と一緒。
         // uodateアクションは表示するページがない　その時はto_route？？
         return to_route('products.index');
@@ -161,8 +169,7 @@ class ProductController extends Controller
     {
         // ログイン中のユーザーがお気に入りしてなければ登録、してれば解除できるらしい
         // Githubにおいてあった
-        Auth::user()
-            ->togglefavorite($product);
+        Auth::user()->togglefavorite($product);
 
         return back();
     }

@@ -22,13 +22,20 @@ class ReviewController extends Controller
             'content' => 'required'
         ]);
 
-        $review = new Review();
-        $review->content = $request->input('content');
-        $review->product_id = $request->input('product_id');
-        $review->user_id = Auth::user()->id;
-        $review->score = $request->input('score');
+        $review = Review::create([
+            'content' => $request->input('content'),
+            'product_id' => $request->input('product_id'), 
+            'user_id' => Auth::user()->id , 
+            'score' => $request->input('score'), 
+        ]);
+
+        // $review = new Review();
+        // $review->content = $request->input('content');
+        // $review->product_id = $request->input('product_id');
+        // $review->user_id = Auth::user()->id;
+        // $review->score = $request->input('score');
         // updateでは機能しなかった
-        $review->save();
+        // $review->create();
       //今まで表示してたページにリダイレクト　ルーティングするってこと？？ 
         return back();
     }

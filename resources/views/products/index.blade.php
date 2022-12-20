@@ -30,7 +30,7 @@
                         <div class="col-12">
                             <p class="samuraimart-product-label mt-2">
                                  {{$product->name}}<br>
-                                 <label>￥{{$product->price}}</label>
+                                 <label>￥{{ number_format($product->price)}}</label>
                             </p>
                         </div>
                     </div>

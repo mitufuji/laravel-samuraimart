@@ -208,3 +208,8 @@
 .review-score-color:focus {
   color: #0fbe9f;
 }
+
+.form-group { 
+  padding: 1%;
+}
+

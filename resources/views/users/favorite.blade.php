@@ -17,7 +17,7 @@
                     </a>
                     <div class="container mt-3">
                         <h5 class="w-100 samuraimart-favorite-item-text">{{App\Models\Product::find($fav->favoriteable_id)->name}}</h5>
-                        <h6 class="w-100 samuraimart-favorite-item-text">&yen;{{App\Models\Product::find($fav->favoriteable_id)->price}}</h6>
+                        <h6 class="w-100 samuraimart-favorite-item-text">&yen;{{number_format(App\Models\Product::find($fav->favoriteable_id)->price)}}</h6>
                     </div>
                 </div>
             </div>

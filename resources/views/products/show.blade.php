@@ -17,7 +17,7 @@
                  </p>
                  <hr>
                  <p class="d-flex align-items-end">
-                     ￥{{$product->price}}(税込)
+                     ￥{{ number_format($product->price)}}(税込)
                  </p>
                  <hr>
             </div>
@@ -27,7 +27,7 @@
                 <input type="hidden" name="id" value="{{$product->id}}">
                 <input type="hidden" name="name" value="{{$product->name}}">
                 <input type="hidden" name="price" value="{{$product->price}}">
-                <div class="form-group row">
+                <div class="form-group row m-3">
                      <label for="quantity" class="col-sm-2 col-form-label">数量</label>
                      <div class="col-sm-10">
                          <input type="number" id="quantity" name="qty" min="1" value="1" class="form-control w-25">

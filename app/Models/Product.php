@@ -11,6 +11,10 @@ class Product extends Model
 {
     use HasFactory, Favoriteable, Sortable;
 
+    protected $fillable = [
+        'name','description','price','category_id',
+    ];
+
     public function category()
     {
         // 子テーブルで親テーブルのリレーション定義　今回　1対1

@@ -17,51 +17,69 @@ class ProductController extends Controller
      * 
      */
     public function index(Request $request){
-        // 引数ないため、Productsテーブル全て習得。この状態は単純に値を習得してるだけで、配列ではない。配列にするには、
-        // $products = Product::all()->toArray();
-        // view()ヘルパー　引数のviewとして指定する。ページ（URL）ではない
-        // 引数は フォルダ名・ファイル名 で指定（blade.php）要らない
-        // compact()関数　引数を配列にする
-        // 引数$products（productテーブル）の情報を全て配列にする　
-        // [id=>'1' name=>'本' price=>'2000']
-
-        // productモデルのデータベースを15件ずつ、ページネーションで表示
-
-        
-        $paginate = config('const.paginate');
-        
         if($request->category !== null){
-            // whereテーブルから条件にあてはまるものを抽出
-            $products = Product::where('category_id', $request->category)
-                ->orderBy('price', 'desc')                
-                ->sortable()
-                ->paginate($paginate);
-            // Product::where('category_id',$request->category)の実行回数
+            $products = Product::where('category_id', $request->category);
             $total_count = Product::where('category_id', $request->category)
                 ->count();
             $category = Category::find($request->category);
         }else{
-            
-            $products = Product::sortable()
-                ->orderBy('price', 'desc')
-                ->paginate($paginate);
-                         
+            $products = new Product;
             $total_count = "";
             $category = null;
-            // logger($products);
-            // dd();
-        
         }
 
+        $products =Product::sortable()
+            ->orderBy('price', 'desc')
+            ->paginate(config('const.paginate'));
+       
+            
+            return view('products.index')->with([
+            'products' => $products,
+            'category' => $category,
+            'categories' => Category::all(),
+            'major_category_names' => Category::pluck('major_category_name')->unique(),
+            'total_count' => $total_count,
+        ]);
         
-        $categories = Category::all();
-        // Categoryからmajor_category_namesのみ取り出す（pluck）　uniqueで重複部分を削除
-        $major_category_names = Category::pluck('major_category_name')
-            ->unique();
+        
+    }
+    // public function index(Request $request){
+    
+        
+    //     $paginate = config('const.paginate');
+        
+    //     if($request->category !== null){
+    //         // whereテーブルから条件にあてはまるものを抽出
+    //         $products = Product::where('category_id', $request->category)
+    //             ->orderBy('price', 'desc')                
+    //             ->sortable()
+    //             ->paginate($paginate);
+    //         // Product::where('category_id',$request->category)の実行回数
+    //         $total_count = Product::where('category_id', $request->category)
+    //             ->count();
+    //         $category = Category::find($request->category);
+    //     }else{
+            
+    //         $products = Product::sortable()
+    //             ->orderBy('price', 'desc')
+    //             ->paginate($paginate);
+                         
+    //         $total_count = "";
+    //         $category = null;
+    //         // logger($products);
+    //         // dd();
+        
+    //     }
+
+        
+    //     $categories = Category::all();
+    //     // Categoryからmajor_category_namesのみ取り出す（pluck）　uniqueで重複部分を削除
+    //     $major_category_names = Category::pluck('major_category_name')
+    //         ->unique();
       
        
-        return view('products.index', compact('products', 'category','categories', 'major_category_names','total_count'));
-    }
+    //     return view('products.index', compact('products', 'category','categories', 'major_category_names','total_count'));
+    // }
 
     /**
      * Show the form for creating a new resource.
@@ -77,22 +95,23 @@ class ProductController extends Controller
 
     /**
      * Store a newly created resource in storage.
-     *Requestクラスを使い、データを受け取り保存
+
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    // Requestクラスの型宣言
+    
     public function store(Request $request){
-        // インスタンス化　各カラムを変数宣言し値を入力可能に
+        
         $product = new Product();
-        // フォームから送信されたデータは$requestにある。nameにinputされた値は$productのnameカラムにいれます。
-        $product->name = $request->input('name');
-        $product->description = $request->input('description');
-        $product->price = $request->input('price');
-        $product->category_id = $request->input('category_id');
-        // 最後はsave　updateでは機能せず
-        $product->save();
-        //return to_route('products.index') データ保存後、リダイレクトする 
+        
+        $product->fill($request->all())
+                 ->save();
+        // $product->name = $request->input('name');
+        // $product->description = $request->input('description');
+        // $product->price = $request->input('price');
+        // $product->category_id = $request->input('category_id');
+        
+        //   $product->save();
         return to_route('products.index');
 
     }
@@ -141,12 +160,15 @@ class ProductController extends Controller
     // formで入力を受け取った$requestと指定されたidの値を受け取った引数が指定されている
     // edit.balde.phpからきてる
     public function update(Request $request, Product $product){
-        $product->name = $request->input('name');
-        $product->description = $request->input('description');
-        $product->price = $request->input('price');
-        $product->category_id = $request->input('category_id');
-        // 入力内容をアップデート
-        $product->save();
+
+        $product->fill($request->all())
+                 ->update();
+        // $product->name = $request->input('name');
+        // $product->description = $request->input('description');
+        // $product->price = $request->input('price');
+        // $product->category_id = $request->input('category_id');
+        // // 入力内容をアップデート
+        // $product->save();
         // to_route　は　redirect()->route('')と一緒。
         // uodateアクションは表示するページがない　その時はto_route？？
         return to_route('products.index');

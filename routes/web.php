@@ -34,8 +34,15 @@ Route::controller(UserCountroller::class)->group(function() {
     Route::get('users/mypage/password/edit','edit_password')->name('mypage.edit_password');
     Route::put('users/mypage/password','update_password')->name('mypage.update_password');
     Route::get('users/mypage/favorite','favorite')->name('mypage.favorite');
+    Route::delete('users/mypage/destroy','destroy')->name('mypage.destroy');
+    Route::get('users/mypage/cart_history','cart_history_index')->name('mypage.cart_history');
+    Route::get('users/mypage/cart_history/{num}', 'cart_history_show')->name('mypage.cart_history_show');
+    Route::get('users/mypage/register_card', 'register_card')->name('mypage.register_card');
+    Route::post('users/mypage/token', 'token')->name('mypage.token');
+
+
 });
-Route::post('reviews',[ReviewController::class,'store'])->name('reviews.store');
+Route::post('reviews',[ReviewContrshow::class,'store'])->name('reviews.store');
 
 Route::get('products/{product}/favorite',[ProductController::class,'favorite'])->name('products.favorite');
 // resource　CRUDのルーティングを一度にできる。

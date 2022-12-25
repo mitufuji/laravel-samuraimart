@@ -6,6 +6,10 @@ use App\Models\User;
 use App\Models\Product;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use App\Models\ShoppingCart;
+use Illuminate\Pagination\LengthAwarePaginator;
+use Gloudemans\Shoppingcart\Facades\Cart;
+use Illuminate\Support\Facades\DB;
 
 class UserCountroller extends Controller
 {
@@ -81,6 +85,117 @@ public function mypage()
 
         return view('users.favorite', compact('favorites'));
     }
+
+    public function destroy(Request $request)
+    {
+        $user = Auth::user();
+
+        if($user->deleted_flag){
+            $user->deleted_flag = false;
+        } else {
+            $user->deleted_flag = true;
+        }
+        $user->update();
+
+        Auth::longout();
+
+        return redirect('/');
+    }
+
+    public function cart_history_index(Request $request)
+    {
+        $page = $request->page != null ? $request->page : 1;
+        $user_id = Auth::user()->id;
+        $billings = ShoppingCart::getCurrentUserOrders($user_id);
+        $total = count($billings);
+        $billings = new LengthAwarePaginator(array_slice($billings, ($page - 1) * 15, 15), $total, 15, $page, array('path' => $request->url()));
+
+        
+        return view('users.cart_history_index', compact('billings', 'total'));
+    }
+
+     public function cart_history_show(Request $request)
+     {
+         $num = $request->num;
+         $user_id = Auth::user()->id;
+         $cart_info = DB::table('shoppingcart')->where('instance', $user_id)->where('number', $num)->get()->first();
+         Cart::instance($user_id)->restore($num);
+         $cart_contents = Cart::content();
+         Cart::instance($user_id)->store($num);
+         Cart::destroy();
+ 
+         DB::table('shoppingcart')->where('instance', $user_id)
+             ->where('number', null)
+             ->update(
+                 [
+                     'code' => $cart_info->code,
+                     'number' => $num,
+                     'price_total' => $cart_info->price_total,
+                     'qty' => $cart_info->qty,
+                     'buy_flag' => $cart_info->buy_flag,
+                     'updated_at' => $cart_info->updated_at
+                 ]
+             );
+ 
+         return view('users.cart_history_show', compact('cart_contents', 'cart_info'));
+     }
+
+     public function register_card(Request $request)
+     {
+        $user = Auth::user();
+
+        $pay_jp_secret = env('PAYJP_SECRET_KEY');
+        \Payjp\Payjp::setApiKey($pay_jp_secret);
+
+        $card = [];
+        $count = 0;
+
+        if($user->token != '') {
+            $result = \Payjp\Customer::retrieve($user->token)
+                                    ->cards
+                                    ->all(array('limit'=>1))
+                                    ->data[0];
+            $count = \Payjp\Customer::retrieve($user->token)
+                                    ->cards
+                                    ->all()
+                                    ->count;
+
+                                    $card = [
+                                        'brand' => $result['brand'],
+                                        'exp_month' => $result['exp_month'],
+                                        'exp_year' => $result['exp_year'],
+                                        'last4' => $result['last4'],
+                                    ];
+        }
+
+        return view('users.register_card', compact('card', 'count'));
+     }
+
+     public function token(Request $request)
+     {
+        $pay_jp_secret = env('PAYJP_SECRET_KEY');
+        \Payjp\Payjp::setApiKey($pay_jp_secret);
+
+        $user = Auth::user();
+        $customer = $user->token;
+
+        if($customer != '') {
+            $cu = \Payjp\Customer::retrieve($customer);
+            $delete_card = $cu->cards->retrieve($cu->cards->data[0]['id']);
+            $delete_card->delet();
+            $cu->cards->create(array(
+                'card' => request('payjp-token') 
+            ));
+        }else{
+            $cu = \Payjp\Customer::create(array(
+                'card' => request('payjp-token') 
+            ));
+            $user->token = $cu->id;
+            $user->update();
+        }
+
+        return to_route('mypage');
+     }
 
 
 }

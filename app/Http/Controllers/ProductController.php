@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\MajorCategory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -22,10 +23,12 @@ class ProductController extends Controller
             $total_count = Product::where('category_id', $request->category)
                 ->count();
             $category = Category::find($request->category);
+            $major_category = MajorCategory::find($category->major_category_id);
         }else{
             $products = new Product;
             $total_count = "";
             $category = null;
+            $major_category = null;
         }
 
         $products =Product::sortable()
@@ -37,7 +40,8 @@ class ProductController extends Controller
             'products' => $products,
             'category' => $category,
             'categories' => Category::all(),
-            'major_category_names' => Category::pluck('major_category_name')->unique(),
+            'major_categories' => MajorCategory::all(),
+            'major_category' => $major_category,
             'total_count' => $total_count,
         ]);
         

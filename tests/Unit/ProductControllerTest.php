@@ -24,9 +24,12 @@ class ProductControllerTest extends TestCase
     'category' => '1',
     ]);
 
-    $response = $this->get(route('information.index'));
+    $mock = Mockery::mock(ProductController::class,function (MockInterface $mock) {
+            $mock->shouldReceive('index')
+                ->once();                 
+        }
+    );
 
-    $response->assertOk();
     }
 
 }

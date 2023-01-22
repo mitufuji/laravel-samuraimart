@@ -35,7 +35,7 @@ class ProductController extends Controller
             ->orderBy('price', 'desc')
             ->paginate(config('const.paginate'));
        
-            
+            logger(4444);
             return view('products.index')->with([
             'products' => $products,
             'category' => $category,
@@ -44,7 +44,7 @@ class ProductController extends Controller
             'major_category' => $major_category,
             'total_count' => $total_count,
         ]);
-        
+       
         
     }
     // public function index(Request $request){

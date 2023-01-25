@@ -7,7 +7,7 @@ use App\Models\Category;
 use App\Models\MajorCategory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
+use App\Service\ProductIndexService;
 
 class ProductController extends Controller
 {
@@ -17,26 +17,30 @@ class ProductController extends Controller
      * @return \Illuminate\Http\Response
      * 
      */
-    public function index(Request $request){
+    public function index(Request $request)
+    {
+        // $category_id = Category::where('id', $request->category);
+        // if($request->category !== null){
+        //     logger($id = $request->category);    
+        // }else{
+        //     logger('aaa');
+        // }
+        
         if($request->category !== null){
-            $products = Product::where('category_id', $request->category);
-            $total_count = Product::where('category_id', $request->category)
-                ->count();
-            $category = Category::find($request->category);
-            $major_category = MajorCategory::find($category->major_category_id);
+            $category_request = resolve(ProductIndexService::class)->excute(request()->only('category'));
+            
+            return view('products.index')->with($category_request);
         }else{
             $products = new Product;
-            $total_count = "";
-            $category = null;
-            $major_category = null;
-        }
+                $total_count = "";
+                $category = null;
+                $major_category = null;
+            $products =Product::sortable()
+                ->orderBy('price', 'desc')
+                ->paginate(config('const.paginate'));
+        
 
-        $products =Product::sortable()
-            ->orderBy('price', 'desc')
-            ->paginate(config('const.paginate'));
-       
-            logger(4444);
-            return view('products.index')->with([
+        return view('products.index')->with([
             'products' => $products,
             'category' => $category,
             'categories' => Category::all(),
@@ -44,6 +48,38 @@ class ProductController extends Controller
             'major_category' => $major_category,
             'total_count' => $total_count,
         ]);
+        }
+       
+
+        
+        
+
+        // return view('product.index')->with($category_request);
+        // if($request->category !== null){
+        //     $products = Product::where('category_id', $request->category);
+        //     $total_count = Product::where('category_id', $request->category)
+        //         ->count();
+        //     $category = Category::find($request->category);
+        //     $major_category = MajorCategory::find($category->major_category_id);
+        // }else{
+        //     $products = new Product;
+        //     $total_count = "";
+        //     $category = null;
+        //     $major_category = null;
+        // }
+
+        // $products =Product::sortable()
+        //     ->orderBy('price', 'desc')
+        //     ->paginate(config('const.paginate'));
+                 
+            // return view('products.index')->with([
+            // 'products' => $products,
+            // 'category' => $category,
+            // 'categories' => Category::all(),
+            // 'major_categories' => MajorCategory::all(),
+            // 'major_category' => $major_category,
+            // 'total_count' => $total_count,
+            // ]);
        
         
     }

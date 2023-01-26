@@ -38,11 +38,12 @@ class ProductControllerIndexTest extends TestCase
 
     public function test_request_あり()
     {
+        // モックに期待する返り値作成
         $products = Product::where('category_id', 1)
                                 ->orderBy('price', 'desc')
                                 ->paginate(config('const.paginate'));
         $total_count = Product::where('category_id', 1)
-            ->count();
+                                ->count();
         $category = Category::find(1);
         $major_category = MajorCategory::find($category->major_category_id);
         $category_request = [
@@ -53,7 +54,7 @@ class ProductControllerIndexTest extends TestCase
             'major_category' => $major_category,
             'total_count' => $total_count,
         ];
-        
+        // 返り値の中身確認
         logger(7777);
         logger($category_request);
 

@@ -17,7 +17,7 @@ class ProductIndexService
                                 ->orderBy('price', 'desc')
                                 ->paginate(config('const.paginate'));
         $total_count = Product::where('category_id', $data['category'])
-            ->count();
+                                ->count();
         $category = Category::find($data['category']);
         $major_category = MajorCategory::find($category->major_category_id);
         // }else{

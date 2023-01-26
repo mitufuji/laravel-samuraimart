@@ -1,0 +1,4232 @@
+ブラウザでアクセス時(http://localhost/laravel-samuraimart/public/products?category=1)のログ
+[2023-01-26 19:08:22] local.DEBUG: 1  
+[2023-01-26 19:08:22] local.DEBUG: array (
+  'products' => 
+  Illuminate\Pagination\LengthAwarePaginator::__set_state(array(
+     'items' => 
+    Illuminate\Database\Eloquent\Collection::__set_state(array(
+       'items' => 
+      array (
+        0 => 
+        App\Models\Product::__set_state(array(
+           'connection' => 'mysql',
+           'table' => 'products',
+           'primaryKey' => 'id',
+           'keyType' => 'int',
+           'incrementing' => true,
+           'with' => 
+          array (
+          ),
+           'withCount' => 
+          array (
+          ),
+           'preventsLazyLoading' => false,
+           'perPage' => 15,
+           'exists' => true,
+           'wasRecentlyCreated' => false,
+           'escapeWhenCastingToString' => false,
+           'attributes' => 
+          array (
+            'id' => 8,
+            'name' => 'PHP 入門',
+            'description' => 'phpの入門書です。',
+            'price' => 1000,
+            'category_id' => 1,
+            'created_at' => '2022-12-17 14:48:37',
+            'updated_at' => '2022-12-17 14:48:37',
+            'image' => '',
+            'recommend_flag' => 0,
+            'carriage_flag' => 0,
+          ),
+           'original' => 
+          array (
+            'id' => 8,
+            'name' => 'PHP 入門',
+            'description' => 'phpの入門書です。',
+            'price' => 1000,
+            'category_id' => 1,
+            'created_at' => '2022-12-17 14:48:37',
+            'updated_at' => '2022-12-17 14:48:37',
+            'image' => '',
+            'recommend_flag' => 0,
+            'carriage_flag' => 0,
+          ),
+           'changes' => 
+          array (
+          ),
+           'casts' => 
+          array (
+          ),
+           'classCastCache' => 
+          array (
+          ),
+           'attributeCastCache' => 
+          array (
+          ),
+           'dates' => 
+          array (
+          ),
+           'dateFormat' => NULL,
+           'appends' => 
+          array (
+          ),
+           'dispatchesEvents' => 
+          array (
+          ),
+           'observables' => 
+          array (
+          ),
+           'relations' => 
+          array (
+          ),
+           'touches' => 
+          array (
+          ),
+           'timestamps' => true,
+           'hidden' => 
+          array (
+          ),
+           'visible' => 
+          array (
+          ),
+           'fillable' => 
+          array (
+            0 => 'name',
+            1 => 'description',
+            2 => 'price',
+            3 => 'category_id',
+            4 => 'image',
+            5 => 'recommend_flag',
+            6 => 'carriage_flag',
+          ),
+           'guarded' => 
+          array (
+            0 => '*',
+          ),
+        )),
+        1 => 
+        App\Models\Product::__set_state(array(
+           'connection' => 'mysql',
+           'table' => 'products',
+           'primaryKey' => 'id',
+           'keyType' => 'int',
+           'incrementing' => true,
+           'with' => 
+          array (
+          ),
+           'withCount' => 
+          array (
+          ),
+           'preventsLazyLoading' => false,
+           'perPage' => 15,
+           'exists' => true,
+           'wasRecentlyCreated' => false,
+           'escapeWhenCastingToString' => false,
+           'attributes' => 
+          array (
+            'id' => 21,
+            'name' => 'name1',
+            'description' => 'description1',
+            'price' => 1000,
+            'category_id' => 1,
+            'created_at' => '2022-12-24 00:19:55',
+            'updated_at' => '2022-12-24 00:19:55',
+            'image' => 'img/dummy.png',
+            'recommend_flag' => 1,
+            'carriage_flag' => 0,
+          ),
+           'original' => 
+          array (
+            'id' => 21,
+            'name' => 'name1',
+            'description' => 'description1',
+            'price' => 1000,
+            'category_id' => 1,
+            'created_at' => '2022-12-24 00:19:55',
+            'updated_at' => '2022-12-24 00:19:55',
+            'image' => 'img/dummy.png',
+            'recommend_flag' => 1,
+            'carriage_flag' => 0,
+          ),
+           'changes' => 
+          array (
+          ),
+           'casts' => 
+          array (
+          ),
+           'classCastCache' => 
+          array (
+          ),
+           'attributeCastCache' => 
+          array (
+          ),
+           'dates' => 
+          array (
+          ),
+           'dateFormat' => NULL,
+           'appends' => 
+          array (
+          ),
+           'dispatchesEvents' => 
+          array (
+          ),
+           'observables' => 
+          array (
+          ),
+           'relations' => 
+          array (
+          ),
+           'touches' => 
+          array (
+          ),
+           'timestamps' => true,
+           'hidden' => 
+          array (
+          ),
+           'visible' => 
+          array (
+          ),
+           'fillable' => 
+          array (
+            0 => 'name',
+            1 => 'description',
+            2 => 'price',
+            3 => 'category_id',
+            4 => 'image',
+            5 => 'recommend_flag',
+            6 => 'carriage_flag',
+          ),
+           'guarded' => 
+          array (
+            0 => '*',
+          ),
+        )),
+      ),
+       'escapeWhenCastingToString' => false,
+    )),
+     'perPage' => 15,
+     'currentPage' => 1,
+     'path' => 'http://localhost/laravel-samuraimart/public/products',
+     'query' => 
+    array (
+    ),
+     'fragment' => NULL,
+     'pageName' => 'page',
+     'onEachSide' => 3,
+     'options' => 
+    array (
+      'path' => 'http://localhost/laravel-samuraimart/public/products',
+      'pageName' => 'page',
+    ),
+     'total' => 2,
+     'lastPage' => 1,
+  )),
+  'category' => 
+  App\Models\Category::__set_state(array(
+     'connection' => 'mysql',
+     'table' => 'categories',
+     'primaryKey' => 'id',
+     'keyType' => 'int',
+     'incrementing' => true,
+     'with' => 
+    array (
+    ),
+     'withCount' => 
+    array (
+    ),
+     'preventsLazyLoading' => false,
+     'perPage' => 15,
+     'exists' => true,
+     'wasRecentlyCreated' => false,
+     'escapeWhenCastingToString' => false,
+     'attributes' => 
+    array (
+      'id' => 1,
+      'name' => 'ビジネス',
+      'description' => 'ビジネス',
+      'created_at' => '2022-12-06 22:05:52',
+      'updated_at' => '2022-12-22 05:14:14',
+      'major_category_id' => 1,
+    ),
+     'original' => 
+    array (
+      'id' => 1,
+      'name' => 'ビジネス',
+      'description' => 'ビジネス',
+      'created_at' => '2022-12-06 22:05:52',
+      'updated_at' => '2022-12-22 05:14:14',
+      'major_category_id' => 1,
+    ),
+     'changes' => 
+    array (
+    ),
+     'casts' => 
+    array (
+    ),
+     'classCastCache' => 
+    array (
+    ),
+     'attributeCastCache' => 
+    array (
+    ),
+     'dates' => 
+    array (
+    ),
+     'dateFormat' => NULL,
+     'appends' => 
+    array (
+    ),
+     'dispatchesEvents' => 
+    array (
+    ),
+     'observables' => 
+    array (
+    ),
+     'relations' => 
+    array (
+    ),
+     'touches' => 
+    array (
+    ),
+     'timestamps' => true,
+     'hidden' => 
+    array (
+    ),
+     'visible' => 
+    array (
+    ),
+     'fillable' => 
+    array (
+    ),
+     'guarded' => 
+    array (
+      0 => '*',
+    ),
+  )),
+  'categories' => 
+  Illuminate\Database\Eloquent\Collection::__set_state(array(
+     'items' => 
+    array (
+      0 => 
+      App\Models\Category::__set_state(array(
+         'connection' => 'mysql',
+         'table' => 'categories',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'preventsLazyLoading' => false,
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'escapeWhenCastingToString' => false,
+         'attributes' => 
+        array (
+          'id' => 1,
+          'name' => 'ビジネス',
+          'description' => 'ビジネス',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:14:14',
+          'major_category_id' => 1,
+        ),
+         'original' => 
+        array (
+          'id' => 1,
+          'name' => 'ビジネス',
+          'description' => 'ビジネス',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:14:14',
+          'major_category_id' => 1,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'attributeCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'fillable' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      1 => 
+      App\Models\Category::__set_state(array(
+         'connection' => 'mysql',
+         'table' => 'categories',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'preventsLazyLoading' => false,
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'escapeWhenCastingToString' => false,
+         'attributes' => 
+        array (
+          'id' => 2,
+          'name' => '文学・評論',
+          'description' => '文学・評論',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:14:29',
+          'major_category_id' => 1,
+        ),
+         'original' => 
+        array (
+          'id' => 2,
+          'name' => '文学・評論',
+          'description' => '文学・評論',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:14:29',
+          'major_category_id' => 1,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'attributeCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'fillable' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      2 => 
+      App\Models\Category::__set_state(array(
+         'connection' => 'mysql',
+         'table' => 'categories',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'preventsLazyLoading' => false,
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'escapeWhenCastingToString' => false,
+         'attributes' => 
+        array (
+          'id' => 3,
+          'name' => '人文・思想',
+          'description' => '人文・思想',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:14:34',
+          'major_category_id' => 1,
+        ),
+         'original' => 
+        array (
+          'id' => 3,
+          'name' => '人文・思想',
+          'description' => '人文・思想',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:14:34',
+          'major_category_id' => 1,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'attributeCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'fillable' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      3 => 
+      App\Models\Category::__set_state(array(
+         'connection' => 'mysql',
+         'table' => 'categories',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'preventsLazyLoading' => false,
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'escapeWhenCastingToString' => false,
+         'attributes' => 
+        array (
+          'id' => 4,
+          'name' => 'スポーツ',
+          'description' => 'スポーツ',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:14:37',
+          'major_category_id' => 1,
+        ),
+         'original' => 
+        array (
+          'id' => 4,
+          'name' => 'スポーツ',
+          'description' => 'スポーツ',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:14:37',
+          'major_category_id' => 1,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'attributeCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'fillable' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      4 => 
+      App\Models\Category::__set_state(array(
+         'connection' => 'mysql',
+         'table' => 'categories',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'preventsLazyLoading' => false,
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'escapeWhenCastingToString' => false,
+         'attributes' => 
+        array (
+          'id' => 5,
+          'name' => 'コンピュータ・IT',
+          'description' => 'コンピュータ・IT',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:09',
+          'major_category_id' => 1,
+        ),
+         'original' => 
+        array (
+          'id' => 5,
+          'name' => 'コンピュータ・IT',
+          'description' => 'コンピュータ・IT',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:09',
+          'major_category_id' => 1,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'attributeCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'fillable' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      5 => 
+      App\Models\Category::__set_state(array(
+         'connection' => 'mysql',
+         'table' => 'categories',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'preventsLazyLoading' => false,
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'escapeWhenCastingToString' => false,
+         'attributes' => 
+        array (
+          'id' => 6,
+          'name' => '資格・検定・就職',
+          'description' => '資格・検定・就職',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:12',
+          'major_category_id' => 1,
+        ),
+         'original' => 
+        array (
+          'id' => 6,
+          'name' => '資格・検定・就職',
+          'description' => '資格・検定・就職',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:12',
+          'major_category_id' => 1,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'attributeCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'fillable' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      6 => 
+      App\Models\Category::__set_state(array(
+         'connection' => 'mysql',
+         'table' => 'categories',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'preventsLazyLoading' => false,
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'escapeWhenCastingToString' => false,
+         'attributes' => 
+        array (
+          'id' => 7,
+          'name' => '絵本・児童書',
+          'description' => '絵本・児童書',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:15',
+          'major_category_id' => 1,
+        ),
+         'original' => 
+        array (
+          'id' => 7,
+          'name' => '絵本・児童書',
+          'description' => '絵本・児童書',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:15',
+          'major_category_id' => 1,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'attributeCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'fillable' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      7 => 
+      App\Models\Category::__set_state(array(
+         'connection' => 'mysql',
+         'table' => 'categories',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'preventsLazyLoading' => false,
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'escapeWhenCastingToString' => false,
+         'attributes' => 
+        array (
+          'id' => 8,
+          'name' => '写真集',
+          'description' => '写真集',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:19',
+          'major_category_id' => 1,
+        ),
+         'original' => 
+        array (
+          'id' => 8,
+          'name' => '写真集',
+          'description' => '写真集',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:19',
+          'major_category_id' => 1,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'attributeCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'fillable' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      8 => 
+      App\Models\Category::__set_state(array(
+         'connection' => 'mysql',
+         'table' => 'categories',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'preventsLazyLoading' => false,
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'escapeWhenCastingToString' => false,
+         'attributes' => 
+        array (
+          'id' => 9,
+          'name' => 'ゲーム攻略本',
+          'description' => 'ゲーム攻略本',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:22',
+          'major_category_id' => 1,
+        ),
+         'original' => 
+        array (
+          'id' => 9,
+          'name' => 'ゲーム攻略本',
+          'description' => 'ゲーム攻略本',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:22',
+          'major_category_id' => 1,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'attributeCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'fillable' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      9 => 
+      App\Models\Category::__set_state(array(
+         'connection' => 'mysql',
+         'table' => 'categories',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'preventsLazyLoading' => false,
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'escapeWhenCastingToString' => false,
+         'attributes' => 
+        array (
+          'id' => 10,
+          'name' => '雑誌',
+          'description' => '雑誌',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:27',
+          'major_category_id' => 1,
+        ),
+         'original' => 
+        array (
+          'id' => 10,
+          'name' => '雑誌',
+          'description' => '雑誌',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:27',
+          'major_category_id' => 1,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'attributeCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'fillable' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      10 => 
+      App\Models\Category::__set_state(array(
+         'connection' => 'mysql',
+         'table' => 'categories',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'preventsLazyLoading' => false,
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'escapeWhenCastingToString' => false,
+         'attributes' => 
+        array (
+          'id' => 11,
+          'name' => 'アート・デザイン',
+          'description' => 'アート・デザイン',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:35',
+          'major_category_id' => 1,
+        ),
+         'original' => 
+        array (
+          'id' => 11,
+          'name' => 'アート・デザイン',
+          'description' => 'アート・デザイン',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:35',
+          'major_category_id' => 1,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'attributeCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'fillable' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      11 => 
+      App\Models\Category::__set_state(array(
+         'connection' => 'mysql',
+         'table' => 'categories',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'preventsLazyLoading' => false,
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'escapeWhenCastingToString' => false,
+         'attributes' => 
+        array (
+          'id' => 12,
+          'name' => 'ノンフィクション',
+          'description' => 'ノンフィクション',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:38',
+          'major_category_id' => 1,
+        ),
+         'original' => 
+        array (
+          'id' => 12,
+          'name' => 'ノンフィクション',
+          'description' => 'ノンフィクション',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:38',
+          'major_category_id' => 1,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'attributeCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'fillable' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      12 => 
+      App\Models\Category::__set_state(array(
+         'connection' => 'mysql',
+         'table' => 'categories',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'preventsLazyLoading' => false,
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'escapeWhenCastingToString' => false,
+         'attributes' => 
+        array (
+          'id' => 13,
+          'name' => 'ノートPC',
+          'description' => 'ノートPC',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:46',
+          'major_category_id' => 2,
+        ),
+         'original' => 
+        array (
+          'id' => 13,
+          'name' => 'ノートPC',
+          'description' => 'ノートPC',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:46',
+          'major_category_id' => 2,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'attributeCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'fillable' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      13 => 
+      App\Models\Category::__set_state(array(
+         'connection' => 'mysql',
+         'table' => 'categories',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'preventsLazyLoading' => false,
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'escapeWhenCastingToString' => false,
+         'attributes' => 
+        array (
+          'id' => 14,
+          'name' => 'デスクトップPC',
+          'description' => 'デスクトップPC',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:50',
+          'major_category_id' => 2,
+        ),
+         'original' => 
+        array (
+          'id' => 14,
+          'name' => 'デスクトップPC',
+          'description' => 'デスクトップPC',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:50',
+          'major_category_id' => 2,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'attributeCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'fillable' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      14 => 
+      App\Models\Category::__set_state(array(
+         'connection' => 'mysql',
+         'table' => 'categories',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'preventsLazyLoading' => false,
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'escapeWhenCastingToString' => false,
+         'attributes' => 
+        array (
+          'id' => 15,
+          'name' => 'タブレット',
+          'description' => 'タブレット',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:54',
+          'major_category_id' => 2,
+        ),
+         'original' => 
+        array (
+          'id' => 15,
+          'name' => 'タブレット',
+          'description' => 'タブレット',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:54',
+          'major_category_id' => 2,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'attributeCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'fillable' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      15 => 
+      App\Models\Category::__set_state(array(
+         'connection' => 'mysql',
+         'table' => 'categories',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'preventsLazyLoading' => false,
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'escapeWhenCastingToString' => false,
+         'attributes' => 
+        array (
+          'id' => 16,
+          'name' => '19~20インチ',
+          'description' => '19~20インチ',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:16:01',
+          'major_category_id' => 3,
+        ),
+         'original' => 
+        array (
+          'id' => 16,
+          'name' => '19~20インチ',
+          'description' => '19~20インチ',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:16:01',
+          'major_category_id' => 3,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'attributeCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'fillable' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      16 => 
+      App\Models\Category::__set_state(array(
+         'connection' => 'mysql',
+         'table' => 'categories',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'preventsLazyLoading' => false,
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'escapeWhenCastingToString' => false,
+         'attributes' => 
+        array (
+          'id' => 17,
+          'name' => 'デスクトップPC',
+          'description' => 'デスクトップPC',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:16:08',
+          'major_category_id' => 3,
+        ),
+         'original' => 
+        array (
+          'id' => 17,
+          'name' => 'デスクトップPC',
+          'description' => 'デスクトップPC',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:16:08',
+          'major_category_id' => 3,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'attributeCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'fillable' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      17 => 
+      App\Models\Category::__set_state(array(
+         'connection' => 'mysql',
+         'table' => 'categories',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'preventsLazyLoading' => false,
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'escapeWhenCastingToString' => false,
+         'attributes' => 
+        array (
+          'id' => 18,
+          'name' => 'タブレット',
+          'description' => 'タブレット',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:16:11',
+          'major_category_id' => 3,
+        ),
+         'original' => 
+        array (
+          'id' => 18,
+          'name' => 'タブレット',
+          'description' => 'タブレット',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:16:11',
+          'major_category_id' => 3,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'attributeCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'fillable' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+    ),
+     'escapeWhenCastingToString' => false,
+  )),
+  'major_categories' => 
+  Illuminate\Database\Eloquent\Collection::__set_state(array(
+     'items' => 
+    array (
+      0 => 
+      App\Models\MajorCategory::__set_state(array(
+         'connection' => 'mysql',
+         'table' => 'major_categories',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'preventsLazyLoading' => false,
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'escapeWhenCastingToString' => false,
+         'attributes' => 
+        array (
+          'id' => 1,
+          'name' => '本',
+          'description' => '本',
+          'created_at' => '2022-12-21 23:29:36',
+          'updated_at' => '2022-12-21 23:29:36',
+        ),
+         'original' => 
+        array (
+          'id' => 1,
+          'name' => '本',
+          'description' => '本',
+          'created_at' => '2022-12-21 23:29:36',
+          'updated_at' => '2022-12-21 23:29:36',
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'attributeCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'fillable' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      1 => 
+      App\Models\MajorCategory::__set_state(array(
+         'connection' => 'mysql',
+         'table' => 'major_categories',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'preventsLazyLoading' => false,
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'escapeWhenCastingToString' => false,
+         'attributes' => 
+        array (
+          'id' => 2,
+          'name' => 'コンピューター',
+          'description' => 'コンピューター',
+          'created_at' => '2022-12-21 23:29:36',
+          'updated_at' => '2022-12-21 23:29:36',
+        ),
+         'original' => 
+        array (
+          'id' => 2,
+          'name' => 'コンピューター',
+          'description' => 'コンピューター',
+          'created_at' => '2022-12-21 23:29:36',
+          'updated_at' => '2022-12-21 23:29:36',
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'attributeCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'fillable' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      2 => 
+      App\Models\MajorCategory::__set_state(array(
+         'connection' => 'mysql',
+         'table' => 'major_categories',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'preventsLazyLoading' => false,
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'escapeWhenCastingToString' => false,
+         'attributes' => 
+        array (
+          'id' => 3,
+          'name' => 'ディスプレイ',
+          'description' => 'ディスプレイ',
+          'created_at' => '2022-12-21 23:29:36',
+          'updated_at' => '2022-12-21 23:29:36',
+        ),
+         'original' => 
+        array (
+          'id' => 3,
+          'name' => 'ディスプレイ',
+          'description' => 'ディスプレイ',
+          'created_at' => '2022-12-21 23:29:36',
+          'updated_at' => '2022-12-21 23:29:36',
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'attributeCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'fillable' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+    ),
+     'escapeWhenCastingToString' => false,
+  )),
+  'major_category' => 
+  App\Models\MajorCategory::__set_state(array(
+     'connection' => 'mysql',
+     'table' => 'major_categories',
+     'primaryKey' => 'id',
+     'keyType' => 'int',
+     'incrementing' => true,
+     'with' => 
+    array (
+    ),
+     'withCount' => 
+    array (
+    ),
+     'preventsLazyLoading' => false,
+     'perPage' => 15,
+     'exists' => true,
+     'wasRecentlyCreated' => false,
+     'escapeWhenCastingToString' => false,
+     'attributes' => 
+    array (
+      'id' => 1,
+      'name' => '本',
+      'description' => '本',
+      'created_at' => '2022-12-21 23:29:36',
+      'updated_at' => '2022-12-21 23:29:36',
+    ),
+     'original' => 
+    array (
+      'id' => 1,
+      'name' => '本',
+      'description' => '本',
+      'created_at' => '2022-12-21 23:29:36',
+      'updated_at' => '2022-12-21 23:29:36',
+    ),
+     'changes' => 
+    array (
+    ),
+     'casts' => 
+    array (
+    ),
+     'classCastCache' => 
+    array (
+    ),
+     'attributeCastCache' => 
+    array (
+    ),
+     'dates' => 
+    array (
+    ),
+     'dateFormat' => NULL,
+     'appends' => 
+    array (
+    ),
+     'dispatchesEvents' => 
+    array (
+    ),
+     'observables' => 
+    array (
+    ),
+     'relations' => 
+    array (
+    ),
+     'touches' => 
+    array (
+    ),
+     'timestamps' => true,
+     'hidden' => 
+    array (
+    ),
+     'visible' => 
+    array (
+    ),
+     'fillable' => 
+    array (
+    ),
+     'guarded' => 
+    array (
+      0 => '*',
+    ),
+  )),
+  'total_count' => 2,
+)  
+[2023-01-26 19:08:22] local.DEBUG: array (
+  'products' => 
+  Illuminate\Pagination\LengthAwarePaginator::__set_state(array(
+     'items' => 
+    Illuminate\Database\Eloquent\Collection::__set_state(array(
+       'items' => 
+      array (
+        0 => 
+        App\Models\Product::__set_state(array(
+           'connection' => 'mysql',
+           'table' => 'products',
+           'primaryKey' => 'id',
+           'keyType' => 'int',
+           'incrementing' => true,
+           'with' => 
+          array (
+          ),
+           'withCount' => 
+          array (
+          ),
+           'preventsLazyLoading' => false,
+           'perPage' => 15,
+           'exists' => true,
+           'wasRecentlyCreated' => false,
+           'escapeWhenCastingToString' => false,
+           'attributes' => 
+          array (
+            'id' => 8,
+            'name' => 'PHP 入門',
+            'description' => 'phpの入門書です。',
+            'price' => 1000,
+            'category_id' => 1,
+            'created_at' => '2022-12-17 14:48:37',
+            'updated_at' => '2022-12-17 14:48:37',
+            'image' => '',
+            'recommend_flag' => 0,
+            'carriage_flag' => 0,
+          ),
+           'original' => 
+          array (
+            'id' => 8,
+            'name' => 'PHP 入門',
+            'description' => 'phpの入門書です。',
+            'price' => 1000,
+            'category_id' => 1,
+            'created_at' => '2022-12-17 14:48:37',
+            'updated_at' => '2022-12-17 14:48:37',
+            'image' => '',
+            'recommend_flag' => 0,
+            'carriage_flag' => 0,
+          ),
+           'changes' => 
+          array (
+          ),
+           'casts' => 
+          array (
+          ),
+           'classCastCache' => 
+          array (
+          ),
+           'attributeCastCache' => 
+          array (
+          ),
+           'dates' => 
+          array (
+          ),
+           'dateFormat' => NULL,
+           'appends' => 
+          array (
+          ),
+           'dispatchesEvents' => 
+          array (
+          ),
+           'observables' => 
+          array (
+          ),
+           'relations' => 
+          array (
+          ),
+           'touches' => 
+          array (
+          ),
+           'timestamps' => true,
+           'hidden' => 
+          array (
+          ),
+           'visible' => 
+          array (
+          ),
+           'fillable' => 
+          array (
+            0 => 'name',
+            1 => 'description',
+            2 => 'price',
+            3 => 'category_id',
+            4 => 'image',
+            5 => 'recommend_flag',
+            6 => 'carriage_flag',
+          ),
+           'guarded' => 
+          array (
+            0 => '*',
+          ),
+        )),
+        1 => 
+        App\Models\Product::__set_state(array(
+           'connection' => 'mysql',
+           'table' => 'products',
+           'primaryKey' => 'id',
+           'keyType' => 'int',
+           'incrementing' => true,
+           'with' => 
+          array (
+          ),
+           'withCount' => 
+          array (
+          ),
+           'preventsLazyLoading' => false,
+           'perPage' => 15,
+           'exists' => true,
+           'wasRecentlyCreated' => false,
+           'escapeWhenCastingToString' => false,
+           'attributes' => 
+          array (
+            'id' => 21,
+            'name' => 'name1',
+            'description' => 'description1',
+            'price' => 1000,
+            'category_id' => 1,
+            'created_at' => '2022-12-24 00:19:55',
+            'updated_at' => '2022-12-24 00:19:55',
+            'image' => 'img/dummy.png',
+            'recommend_flag' => 1,
+            'carriage_flag' => 0,
+          ),
+           'original' => 
+          array (
+            'id' => 21,
+            'name' => 'name1',
+            'description' => 'description1',
+            'price' => 1000,
+            'category_id' => 1,
+            'created_at' => '2022-12-24 00:19:55',
+            'updated_at' => '2022-12-24 00:19:55',
+            'image' => 'img/dummy.png',
+            'recommend_flag' => 1,
+            'carriage_flag' => 0,
+          ),
+           'changes' => 
+          array (
+          ),
+           'casts' => 
+          array (
+          ),
+           'classCastCache' => 
+          array (
+          ),
+           'attributeCastCache' => 
+          array (
+          ),
+           'dates' => 
+          array (
+          ),
+           'dateFormat' => NULL,
+           'appends' => 
+          array (
+          ),
+           'dispatchesEvents' => 
+          array (
+          ),
+           'observables' => 
+          array (
+          ),
+           'relations' => 
+          array (
+          ),
+           'touches' => 
+          array (
+          ),
+           'timestamps' => true,
+           'hidden' => 
+          array (
+          ),
+           'visible' => 
+          array (
+          ),
+           'fillable' => 
+          array (
+            0 => 'name',
+            1 => 'description',
+            2 => 'price',
+            3 => 'category_id',
+            4 => 'image',
+            5 => 'recommend_flag',
+            6 => 'carriage_flag',
+          ),
+           'guarded' => 
+          array (
+            0 => '*',
+          ),
+        )),
+      ),
+       'escapeWhenCastingToString' => false,
+    )),
+     'perPage' => 15,
+     'currentPage' => 1,
+     'path' => 'http://localhost/laravel-samuraimart/public/products',
+     'query' => 
+    array (
+    ),
+     'fragment' => NULL,
+     'pageName' => 'page',
+     'onEachSide' => 3,
+     'options' => 
+    array (
+      'path' => 'http://localhost/laravel-samuraimart/public/products',
+      'pageName' => 'page',
+    ),
+     'total' => 2,
+     'lastPage' => 1,
+  )),
+  'category' => 
+  App\Models\Category::__set_state(array(
+     'connection' => 'mysql',
+     'table' => 'categories',
+     'primaryKey' => 'id',
+     'keyType' => 'int',
+     'incrementing' => true,
+     'with' => 
+    array (
+    ),
+     'withCount' => 
+    array (
+    ),
+     'preventsLazyLoading' => false,
+     'perPage' => 15,
+     'exists' => true,
+     'wasRecentlyCreated' => false,
+     'escapeWhenCastingToString' => false,
+     'attributes' => 
+    array (
+      'id' => 1,
+      'name' => 'ビジネス',
+      'description' => 'ビジネス',
+      'created_at' => '2022-12-06 22:05:52',
+      'updated_at' => '2022-12-22 05:14:14',
+      'major_category_id' => 1,
+    ),
+     'original' => 
+    array (
+      'id' => 1,
+      'name' => 'ビジネス',
+      'description' => 'ビジネス',
+      'created_at' => '2022-12-06 22:05:52',
+      'updated_at' => '2022-12-22 05:14:14',
+      'major_category_id' => 1,
+    ),
+     'changes' => 
+    array (
+    ),
+     'casts' => 
+    array (
+    ),
+     'classCastCache' => 
+    array (
+    ),
+     'attributeCastCache' => 
+    array (
+    ),
+     'dates' => 
+    array (
+    ),
+     'dateFormat' => NULL,
+     'appends' => 
+    array (
+    ),
+     'dispatchesEvents' => 
+    array (
+    ),
+     'observables' => 
+    array (
+    ),
+     'relations' => 
+    array (
+    ),
+     'touches' => 
+    array (
+    ),
+     'timestamps' => true,
+     'hidden' => 
+    array (
+    ),
+     'visible' => 
+    array (
+    ),
+     'fillable' => 
+    array (
+    ),
+     'guarded' => 
+    array (
+      0 => '*',
+    ),
+  )),
+  'categories' => 
+  Illuminate\Database\Eloquent\Collection::__set_state(array(
+     'items' => 
+    array (
+      0 => 
+      App\Models\Category::__set_state(array(
+         'connection' => 'mysql',
+         'table' => 'categories',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'preventsLazyLoading' => false,
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'escapeWhenCastingToString' => false,
+         'attributes' => 
+        array (
+          'id' => 1,
+          'name' => 'ビジネス',
+          'description' => 'ビジネス',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:14:14',
+          'major_category_id' => 1,
+        ),
+         'original' => 
+        array (
+          'id' => 1,
+          'name' => 'ビジネス',
+          'description' => 'ビジネス',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:14:14',
+          'major_category_id' => 1,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'attributeCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'fillable' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      1 => 
+      App\Models\Category::__set_state(array(
+         'connection' => 'mysql',
+         'table' => 'categories',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'preventsLazyLoading' => false,
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'escapeWhenCastingToString' => false,
+         'attributes' => 
+        array (
+          'id' => 2,
+          'name' => '文学・評論',
+          'description' => '文学・評論',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:14:29',
+          'major_category_id' => 1,
+        ),
+         'original' => 
+        array (
+          'id' => 2,
+          'name' => '文学・評論',
+          'description' => '文学・評論',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:14:29',
+          'major_category_id' => 1,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'attributeCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'fillable' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      2 => 
+      App\Models\Category::__set_state(array(
+         'connection' => 'mysql',
+         'table' => 'categories',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'preventsLazyLoading' => false,
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'escapeWhenCastingToString' => false,
+         'attributes' => 
+        array (
+          'id' => 3,
+          'name' => '人文・思想',
+          'description' => '人文・思想',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:14:34',
+          'major_category_id' => 1,
+        ),
+         'original' => 
+        array (
+          'id' => 3,
+          'name' => '人文・思想',
+          'description' => '人文・思想',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:14:34',
+          'major_category_id' => 1,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'attributeCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'fillable' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      3 => 
+      App\Models\Category::__set_state(array(
+         'connection' => 'mysql',
+         'table' => 'categories',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'preventsLazyLoading' => false,
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'escapeWhenCastingToString' => false,
+         'attributes' => 
+        array (
+          'id' => 4,
+          'name' => 'スポーツ',
+          'description' => 'スポーツ',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:14:37',
+          'major_category_id' => 1,
+        ),
+         'original' => 
+        array (
+          'id' => 4,
+          'name' => 'スポーツ',
+          'description' => 'スポーツ',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:14:37',
+          'major_category_id' => 1,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'attributeCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'fillable' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      4 => 
+      App\Models\Category::__set_state(array(
+         'connection' => 'mysql',
+         'table' => 'categories',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'preventsLazyLoading' => false,
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'escapeWhenCastingToString' => false,
+         'attributes' => 
+        array (
+          'id' => 5,
+          'name' => 'コンピュータ・IT',
+          'description' => 'コンピュータ・IT',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:09',
+          'major_category_id' => 1,
+        ),
+         'original' => 
+        array (
+          'id' => 5,
+          'name' => 'コンピュータ・IT',
+          'description' => 'コンピュータ・IT',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:09',
+          'major_category_id' => 1,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'attributeCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'fillable' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      5 => 
+      App\Models\Category::__set_state(array(
+         'connection' => 'mysql',
+         'table' => 'categories',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'preventsLazyLoading' => false,
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'escapeWhenCastingToString' => false,
+         'attributes' => 
+        array (
+          'id' => 6,
+          'name' => '資格・検定・就職',
+          'description' => '資格・検定・就職',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:12',
+          'major_category_id' => 1,
+        ),
+         'original' => 
+        array (
+          'id' => 6,
+          'name' => '資格・検定・就職',
+          'description' => '資格・検定・就職',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:12',
+          'major_category_id' => 1,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'attributeCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'fillable' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      6 => 
+      App\Models\Category::__set_state(array(
+         'connection' => 'mysql',
+         'table' => 'categories',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'preventsLazyLoading' => false,
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'escapeWhenCastingToString' => false,
+         'attributes' => 
+        array (
+          'id' => 7,
+          'name' => '絵本・児童書',
+          'description' => '絵本・児童書',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:15',
+          'major_category_id' => 1,
+        ),
+         'original' => 
+        array (
+          'id' => 7,
+          'name' => '絵本・児童書',
+          'description' => '絵本・児童書',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:15',
+          'major_category_id' => 1,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'attributeCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'fillable' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      7 => 
+      App\Models\Category::__set_state(array(
+         'connection' => 'mysql',
+         'table' => 'categories',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'preventsLazyLoading' => false,
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'escapeWhenCastingToString' => false,
+         'attributes' => 
+        array (
+          'id' => 8,
+          'name' => '写真集',
+          'description' => '写真集',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:19',
+          'major_category_id' => 1,
+        ),
+         'original' => 
+        array (
+          'id' => 8,
+          'name' => '写真集',
+          'description' => '写真集',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:19',
+          'major_category_id' => 1,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'attributeCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'fillable' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      8 => 
+      App\Models\Category::__set_state(array(
+         'connection' => 'mysql',
+         'table' => 'categories',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'preventsLazyLoading' => false,
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'escapeWhenCastingToString' => false,
+         'attributes' => 
+        array (
+          'id' => 9,
+          'name' => 'ゲーム攻略本',
+          'description' => 'ゲーム攻略本',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:22',
+          'major_category_id' => 1,
+        ),
+         'original' => 
+        array (
+          'id' => 9,
+          'name' => 'ゲーム攻略本',
+          'description' => 'ゲーム攻略本',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:22',
+          'major_category_id' => 1,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'attributeCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'fillable' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      9 => 
+      App\Models\Category::__set_state(array(
+         'connection' => 'mysql',
+         'table' => 'categories',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'preventsLazyLoading' => false,
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'escapeWhenCastingToString' => false,
+         'attributes' => 
+        array (
+          'id' => 10,
+          'name' => '雑誌',
+          'description' => '雑誌',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:27',
+          'major_category_id' => 1,
+        ),
+         'original' => 
+        array (
+          'id' => 10,
+          'name' => '雑誌',
+          'description' => '雑誌',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:27',
+          'major_category_id' => 1,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'attributeCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'fillable' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      10 => 
+      App\Models\Category::__set_state(array(
+         'connection' => 'mysql',
+         'table' => 'categories',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'preventsLazyLoading' => false,
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'escapeWhenCastingToString' => false,
+         'attributes' => 
+        array (
+          'id' => 11,
+          'name' => 'アート・デザイン',
+          'description' => 'アート・デザイン',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:35',
+          'major_category_id' => 1,
+        ),
+         'original' => 
+        array (
+          'id' => 11,
+          'name' => 'アート・デザイン',
+          'description' => 'アート・デザイン',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:35',
+          'major_category_id' => 1,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'attributeCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'fillable' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      11 => 
+      App\Models\Category::__set_state(array(
+         'connection' => 'mysql',
+         'table' => 'categories',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'preventsLazyLoading' => false,
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'escapeWhenCastingToString' => false,
+         'attributes' => 
+        array (
+          'id' => 12,
+          'name' => 'ノンフィクション',
+          'description' => 'ノンフィクション',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:38',
+          'major_category_id' => 1,
+        ),
+         'original' => 
+        array (
+          'id' => 12,
+          'name' => 'ノンフィクション',
+          'description' => 'ノンフィクション',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:38',
+          'major_category_id' => 1,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'attributeCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'fillable' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      12 => 
+      App\Models\Category::__set_state(array(
+         'connection' => 'mysql',
+         'table' => 'categories',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'preventsLazyLoading' => false,
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'escapeWhenCastingToString' => false,
+         'attributes' => 
+        array (
+          'id' => 13,
+          'name' => 'ノートPC',
+          'description' => 'ノートPC',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:46',
+          'major_category_id' => 2,
+        ),
+         'original' => 
+        array (
+          'id' => 13,
+          'name' => 'ノートPC',
+          'description' => 'ノートPC',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:46',
+          'major_category_id' => 2,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'attributeCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'fillable' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      13 => 
+      App\Models\Category::__set_state(array(
+         'connection' => 'mysql',
+         'table' => 'categories',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'preventsLazyLoading' => false,
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'escapeWhenCastingToString' => false,
+         'attributes' => 
+        array (
+          'id' => 14,
+          'name' => 'デスクトップPC',
+          'description' => 'デスクトップPC',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:50',
+          'major_category_id' => 2,
+        ),
+         'original' => 
+        array (
+          'id' => 14,
+          'name' => 'デスクトップPC',
+          'description' => 'デスクトップPC',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:50',
+          'major_category_id' => 2,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'attributeCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'fillable' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      14 => 
+      App\Models\Category::__set_state(array(
+         'connection' => 'mysql',
+         'table' => 'categories',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'preventsLazyLoading' => false,
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'escapeWhenCastingToString' => false,
+         'attributes' => 
+        array (
+          'id' => 15,
+          'name' => 'タブレット',
+          'description' => 'タブレット',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:54',
+          'major_category_id' => 2,
+        ),
+         'original' => 
+        array (
+          'id' => 15,
+          'name' => 'タブレット',
+          'description' => 'タブレット',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:15:54',
+          'major_category_id' => 2,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'attributeCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'fillable' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      15 => 
+      App\Models\Category::__set_state(array(
+         'connection' => 'mysql',
+         'table' => 'categories',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'preventsLazyLoading' => false,
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'escapeWhenCastingToString' => false,
+         'attributes' => 
+        array (
+          'id' => 16,
+          'name' => '19~20インチ',
+          'description' => '19~20インチ',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:16:01',
+          'major_category_id' => 3,
+        ),
+         'original' => 
+        array (
+          'id' => 16,
+          'name' => '19~20インチ',
+          'description' => '19~20インチ',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:16:01',
+          'major_category_id' => 3,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'attributeCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'fillable' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      16 => 
+      App\Models\Category::__set_state(array(
+         'connection' => 'mysql',
+         'table' => 'categories',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'preventsLazyLoading' => false,
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'escapeWhenCastingToString' => false,
+         'attributes' => 
+        array (
+          'id' => 17,
+          'name' => 'デスクトップPC',
+          'description' => 'デスクトップPC',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:16:08',
+          'major_category_id' => 3,
+        ),
+         'original' => 
+        array (
+          'id' => 17,
+          'name' => 'デスクトップPC',
+          'description' => 'デスクトップPC',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:16:08',
+          'major_category_id' => 3,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'attributeCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'fillable' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      17 => 
+      App\Models\Category::__set_state(array(
+         'connection' => 'mysql',
+         'table' => 'categories',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'preventsLazyLoading' => false,
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'escapeWhenCastingToString' => false,
+         'attributes' => 
+        array (
+          'id' => 18,
+          'name' => 'タブレット',
+          'description' => 'タブレット',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:16:11',
+          'major_category_id' => 3,
+        ),
+         'original' => 
+        array (
+          'id' => 18,
+          'name' => 'タブレット',
+          'description' => 'タブレット',
+          'created_at' => '2022-12-06 22:05:52',
+          'updated_at' => '2022-12-22 05:16:11',
+          'major_category_id' => 3,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'attributeCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'fillable' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+    ),
+     'escapeWhenCastingToString' => false,
+  )),
+  'major_categories' => 
+  Illuminate\Database\Eloquent\Collection::__set_state(array(
+     'items' => 
+    array (
+      0 => 
+      App\Models\MajorCategory::__set_state(array(
+         'connection' => 'mysql',
+         'table' => 'major_categories',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'preventsLazyLoading' => false,
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'escapeWhenCastingToString' => false,
+         'attributes' => 
+        array (
+          'id' => 1,
+          'name' => '本',
+          'description' => '本',
+          'created_at' => '2022-12-21 23:29:36',
+          'updated_at' => '2022-12-21 23:29:36',
+        ),
+         'original' => 
+        array (
+          'id' => 1,
+          'name' => '本',
+          'description' => '本',
+          'created_at' => '2022-12-21 23:29:36',
+          'updated_at' => '2022-12-21 23:29:36',
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'attributeCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'fillable' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      1 => 
+      App\Models\MajorCategory::__set_state(array(
+         'connection' => 'mysql',
+         'table' => 'major_categories',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'preventsLazyLoading' => false,
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'escapeWhenCastingToString' => false,
+         'attributes' => 
+        array (
+          'id' => 2,
+          'name' => 'コンピューター',
+          'description' => 'コンピューター',
+          'created_at' => '2022-12-21 23:29:36',
+          'updated_at' => '2022-12-21 23:29:36',
+        ),
+         'original' => 
+        array (
+          'id' => 2,
+          'name' => 'コンピューター',
+          'description' => 'コンピューター',
+          'created_at' => '2022-12-21 23:29:36',
+          'updated_at' => '2022-12-21 23:29:36',
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'attributeCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'fillable' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+      2 => 
+      App\Models\MajorCategory::__set_state(array(
+         'connection' => 'mysql',
+         'table' => 'major_categories',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'preventsLazyLoading' => false,
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'escapeWhenCastingToString' => false,
+         'attributes' => 
+        array (
+          'id' => 3,
+          'name' => 'ディスプレイ',
+          'description' => 'ディスプレイ',
+          'created_at' => '2022-12-21 23:29:36',
+          'updated_at' => '2022-12-21 23:29:36',
+        ),
+         'original' => 
+        array (
+          'id' => 3,
+          'name' => 'ディスプレイ',
+          'description' => 'ディスプレイ',
+          'created_at' => '2022-12-21 23:29:36',
+          'updated_at' => '2022-12-21 23:29:36',
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'attributeCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'fillable' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+    ),
+     'escapeWhenCastingToString' => false,
+  )),
+  'major_category' => 
+  App\Models\MajorCategory::__set_state(array(
+     'connection' => 'mysql',
+     'table' => 'major_categories',
+     'primaryKey' => 'id',
+     'keyType' => 'int',
+     'incrementing' => true,
+     'with' => 
+    array (
+    ),
+     'withCount' => 
+    array (
+    ),
+     'preventsLazyLoading' => false,
+     'perPage' => 15,
+     'exists' => true,
+     'wasRecentlyCreated' => false,
+     'escapeWhenCastingToString' => false,
+     'attributes' => 
+    array (
+      'id' => 1,
+      'name' => '本',
+      'description' => '本',
+      'created_at' => '2022-12-21 23:29:36',
+      'updated_at' => '2022-12-21 23:29:36',
+    ),
+     'original' => 
+    array (
+      'id' => 1,
+      'name' => '本',
+      'description' => '本',
+      'created_at' => '2022-12-21 23:29:36',
+      'updated_at' => '2022-12-21 23:29:36',
+    ),
+     'changes' => 
+    array (
+    ),
+     'casts' => 
+    array (
+    ),
+     'classCastCache' => 
+    array (
+    ),
+     'attributeCastCache' => 
+    array (
+    ),
+     'dates' => 
+    array (
+    ),
+     'dateFormat' => NULL,
+     'appends' => 
+    array (
+    ),
+     'dispatchesEvents' => 
+    array (
+    ),
+     'observables' => 
+    array (
+    ),
+     'relations' => 
+    array (
+    ),
+     'touches' => 
+    array (
+    ),
+     'timestamps' => true,
+     'hidden' => 
+    array (
+    ),
+     'visible' => 
+    array (
+    ),
+     'fillable' => 
+    array (
+    ),
+     'guarded' => 
+    array (
+      0 => '*',
+    ),
+  )),
+  'total_count' => 2,
+)  

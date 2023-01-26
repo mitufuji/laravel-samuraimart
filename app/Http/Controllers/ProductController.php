@@ -15,21 +15,24 @@ class ProductController extends Controller
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
-     * 
+     * resources\views\components\sidebar.blade.php　から$requestが来ます
      */
     public function index(Request $request)
     {
+        // 動作確認用
         // $category_id = Category::where('id', $request->category);
-        if($request->category !== null){
-            logger($id = $request->category);    
-        }else{
-            logger('aaa');
-        }
+        // if($request->category !== null){
+        //     logger($id = $request->category);    
+        // }else{
+        //     logger('aaa');
+        // }
         if($request->category !== null){
             $category_request = resolve(ProductIndexService::class)->excute(request()->only('category'));
-            
+            //　！！！！ブラウザでアクセス時のログ.log　はこれです。！！！！！
+            logger($category_request);
             return view('products.index')->with($category_request);
         }else{
+            // $request->category == nullの場合もサービスクラスに入れたかったのですが、$request->category = null　の状態でサービスクラスに渡す方法が分かりませんでした。
             $products = new Product;
                 $total_count = "";
                 $category = null;

@@ -1,11 +1,9 @@
-ERRORS!
-Tests: 2, Assertions: 3, Errors: 1.
-PS C:\xampp\htdocs\laravel-samuraimart> ./vendor/bin/phpunit tests\Feature\ProductControllerIndexTest.php
+PS C:\xampp\htdocs\laravel-samuraimart> ./vendor/bin/phpunit tests\Feature\ProductControllerIndexTest.php test_request_あり
 PHPUnit 9.5.26 by Sebastian Bergmann and contributors.
 
 .F                                                                  2 / 2 (100%)
 
-Time: 00:00.290, Memory: 28.00 MB
+Time: 00:00.306, Memory: 28.00 MB
 
 There was 1 failure:
 
@@ -98,195 +96,13 @@ Failed asserting that two objects are equal.
 +                    'recommend_flag' => 0
                      'carriage_flag' => 0
                  )
-                 'changes' => Array ()
-@@ @@
-                 'fillable' => Array (...)
-                 'guarded' => Array (...)
-             )
-+            2 => App\Models\Product Object (...)
-+            3 => App\Models\Product Object (...)
-+            4 => App\Models\Product Object (...)
-+            5 => App\Models\Product Object (...)
-+            6 => App\Models\Product Object (...)
-+            7 => App\Models\Product Object (...)
-+            8 => App\Models\Product Object (...)
-+            9 => App\Models\Product Object (...)
-+            10 => App\Models\Product Object (...)
-+            11 => App\Models\Product Object (...)
-+            12 => App\Models\Product Object (...)
-+            13 => App\Models\Product Object (...)
-+            14 => App\Models\Product Object (...)
-         )
-         'escapeWhenCastingToString' => false
-     )
-     'perPage' => 15
-     'currentPage' => 1
--    'path' => 'http://localhost'
-+    'path' => 'http://localhost/products'
-     'query' => Array ()
-     'fragment' => null
-     'pageName' => 'page'
-     'onEachSide' => 3
-     'options' => Array (
--        'path' => 'http://localhost'
-+        'path' => 'http://localhost/products'
-         'pageName' => 'page'
-     )
--    'total' => 2
--    'lastPage' => 1
-+    'total' => 20
 +    'lastPage' => 2
  )
 
 C:\xampp\htdocs\laravel-samuraimart\vendor\laravel\framework\src\Illuminate\Testing\TestResponse.php:1046
 C:\xampp\htdocs\laravel-samuraimart\vendor\laravel\framework\src\Illuminate\Testing\TestResponse.php:1064
 C:\xampp\htdocs\laravel-samuraimart\vendor\laravel\framework\src\Illuminate\Testing\TestResponse.php:1027
-C:\xampp\htdocs\laravel-samuraimart\tests\Feature\ProductControllerIndexTest.php:81
-
-FAILURES!
-Tests: 2, Assertions: 4, Failures: 1.
-PS C:\xampp\htdocs\laravel-samuraimart> ./vendor/bin/phpunit tests\Feature\ProductControllerIndexTest.php
-PHPUnit 9.5.26 by Sebastian Bergmann and contributors.
-
-.F                                                                  2 / 2 (100%)
-
-Time: 00:00.332, Memory: 28.00 MB
-
-There was 1 failure:
-
-1) Tests\Feature\ProductControllerIndexTest::test_request_あり
-Failed asserting that two objects are equal.
---- Expected
-+++ Actual
-@@ @@
-                 'wasRecentlyCreated' => false
-                 'escapeWhenCastingToString' => false
-                 'attributes' => Array (
--                    'id' => 8
--                    'name' => 'PHP 入門'
--                    'description' => 'phpの入門書です。'
--                    'price' => 1000
--                    'category_id' => 1
--                    'created_at' => '2022-12-17 14:48:37'
--                    'updated_at' => '2022-12-17 14:48:37'
-+                    'id' => 18
-+                    'name' => 'ノートパソコン7'
-+                    'description' => 'ノートパソコン7'
-+                    'price' => 70000
-+                    'category_id' => 13
-+                    'created_at' => '2022-12-19 15:19:19'
-+                    'updated_at' => '2022-12-19 15:19:19'
-                     'image' => ''
-                     'recommend_flag' => 0
-                     'carriage_flag' => 0
-                 )
-                 'original' => Array (
--                    'id' => 8
--                    'name' => 'PHP 入門'
--                    'description' => 'phpの入門書です。'
--                    'price' => 1000
--                    'category_id' => 1
--                    'created_at' => '2022-12-17 14:48:37'
--                    'updated_at' => '2022-12-17 14:48:37'
-+                    'id' => 18
-+                    'name' => 'ノートパソコン7'
-+                    'description' => 'ノートパソコン7'
-+                    'price' => 70000
-+                    'category_id' => 13
-+                    'created_at' => '2022-12-19 15:19:19'
-+                    'updated_at' => '2022-12-19 15:19:19'
-                     'image' => ''
-                     'recommend_flag' => 0
-                     'carriage_flag' => 0
-@@ @@
-                 'wasRecentlyCreated' => false
-                 'escapeWhenCastingToString' => false
-                 'attributes' => Array (
--                    'id' => 21
--                    'name' => 'name1'
--                    'description' => 'description1'
--                    'price' => 1000
--                    'category_id' => 1
--                    'created_at' => '2022-12-24 00:19:55'
--                    'updated_at' => '2022-12-24 00:19:55'
--                    'image' => 'img/dummy.png'
--                    'recommend_flag' => 1
-+                    'id' => 17
-+                    'name' => 'ノートパソコン6'
-+                    'description' => 'ノートパソコン6'
-+                    'price' => 60000
-+                    'category_id' => 13
-+                    'created_at' => '2022-12-19 15:19:02'
-+                    'updated_at' => '2022-12-19 15:19:02'
-+                    'image' => ''
-+                    'recommend_flag' => 0
-                     'carriage_flag' => 0
-                 )
-                 'original' => Array (
--                    'id' => 21
--                    'name' => 'name1'
--                    'description' => 'description1'
--                    'price' => 1000
--                    'category_id' => 1
--                    'created_at' => '2022-12-24 00:19:55'
--                    'updated_at' => '2022-12-24 00:19:55'
--                    'image' => 'img/dummy.png'
--                    'recommend_flag' => 1
-+                    'id' => 17
-+                    'name' => 'ノートパソコン6'
-+                    'description' => 'ノートパソコン6'
-+                    'price' => 60000
-+                    'category_id' => 13
-+                    'created_at' => '2022-12-19 15:19:02'
-+                    'updated_at' => '2022-12-19 15:19:02'
-+                    'image' => ''
-+                    'recommend_flag' => 0
-                     'carriage_flag' => 0
-                 )
-                 'changes' => Array ()
-@@ @@
-                 'fillable' => Array (...)
-                 'guarded' => Array (...)
-             )
-+            2 => App\Models\Product Object (...)
-+            3 => App\Models\Product Object (...)
-+            4 => App\Models\Product Object (...)
-+            5 => App\Models\Product Object (...)
-+            6 => App\Models\Product Object (...)
-+            7 => App\Models\Product Object (...)
-+            8 => App\Models\Product Object (...)
-+            9 => App\Models\Product Object (...)
-+            10 => App\Models\Product Object (...)
-+            11 => App\Models\Product Object (...)
-+            12 => App\Models\Product Object (...)
-+            13 => App\Models\Product Object (...)
-+            14 => App\Models\Product Object (...)
-         )
-         'escapeWhenCastingToString' => false
-     )
-     'perPage' => 15
-     'currentPage' => 1
--    'path' => 'http://localhost'
-+    'path' => 'http://localhost/products'
-     'query' => Array ()
-     'fragment' => null
-     'pageName' => 'page'
-     'onEachSide' => 3
-     'options' => Array (
--        'path' => 'http://localhost'
-+        'path' => 'http://localhost/products'
-         'pageName' => 'page'
-     )
--    'total' => 2
--    'lastPage' => 1
-+    'total' => 20
-+    'lastPage' => 2
- )
-
-C:\xampp\htdocs\laravel-samuraimart\vendor\laravel\framework\src\Illuminate\Testing\TestResponse.php:1046
-C:\xampp\htdocs\laravel-samuraimart\vendor\laravel\framework\src\Illuminate\Testing\TestResponse.php:1064
-C:\xampp\htdocs\laravel-samuraimart\vendor\laravel\framework\src\Illuminate\Testing\TestResponse.php:1027
-C:\xampp\htdocs\laravel-samuraimart\tests\Feature\ProductControllerIndexTest.php:81
+C:\xampp\htdocs\laravel-samuraimart\tests\Feature\ProductControllerIndexTest.php:72
 
 FAILURES!
 Tests: 2, Assertions: 4, Failures: 1.

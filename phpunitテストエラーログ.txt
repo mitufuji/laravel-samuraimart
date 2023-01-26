@@ -1,9 +1,9 @@
-PS C:\xampp\htdocs\laravel-samuraimart> ./vendor/bin/phpunit tests\Feature\ProductControllerIndexTest.php test_request_あり
+PS C:\xampp\htdocs\laravel-samuraimart> ./vendor/bin/phpunit tests\Feature\ProductControllerIndexTest.php --filter test_request_あり
 PHPUnit 9.5.26 by Sebastian Bergmann and contributors.
 
-.F                                                                  2 / 2 (100%)
+F                                                                   1 / 1 (100%)
 
-Time: 00:00.306, Memory: 28.00 MB
+Time: 00:00.265, Memory: 28.00 MB
 
 There was 1 failure:
 
@@ -96,6 +96,43 @@ Failed asserting that two objects are equal.
 +                    'recommend_flag' => 0
                      'carriage_flag' => 0
                  )
+                 'changes' => Array ()
+@@ @@
+                 'fillable' => Array (...)
+                 'guarded' => Array (...)
+             )
++            2 => App\Models\Product Object (...)
++            3 => App\Models\Product Object (...)
++            4 => App\Models\Product Object (...)
++            5 => App\Models\Product Object (...)
++            6 => App\Models\Product Object (...)
++            7 => App\Models\Product Object (...)
++            8 => App\Models\Product Object (...)
++            9 => App\Models\Product Object (...)
++            10 => App\Models\Product Object (...)
++            11 => App\Models\Product Object (...)
++            12 => App\Models\Product Object (...)
++            13 => App\Models\Product Object (...)
++            14 => App\Models\Product Object (...)
+         )
+         'escapeWhenCastingToString' => false
+     )
+     'perPage' => 15
+     'currentPage' => 1
+-    'path' => 'http://localhost'
++    'path' => 'http://localhost/products'
+     'query' => Array ()
+     'fragment' => null
+     'pageName' => 'page'
+     'onEachSide' => 3
+     'options' => Array (
+-        'path' => 'http://localhost'
++        'path' => 'http://localhost/products'
+         'pageName' => 'page'
+     )
+-    'total' => 2
+-    'lastPage' => 1
++    'total' => 20
 +    'lastPage' => 2
  )
 
@@ -105,4 +142,4 @@ C:\xampp\htdocs\laravel-samuraimart\vendor\laravel\framework\src\Illuminate\Test
 C:\xampp\htdocs\laravel-samuraimart\tests\Feature\ProductControllerIndexTest.php:72
 
 FAILURES!
-Tests: 2, Assertions: 4, Failures: 1.
+Tests: 1, Assertions: 3, Failures: 1.

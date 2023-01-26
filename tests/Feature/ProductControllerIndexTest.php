@@ -63,16 +63,6 @@ class ProductControllerIndexTest extends TestCase
                  ->once()
                  ->andReturn($category_request);
 
-        // $mock = $this->mock(ProductIndexService::class, function (MockInterface $mock) {
-        //     $mock->shouldReceive('excute')
-        //         ->once()
-        //         ->andReturn();
-        // });
-        // ProductIndexService::shouldReceive('excute')
-        //                         ->once()
-        //                         ->andReturn($category_request);
-
-        
         $user = User::factory()->create();
         $this->actingAs($user);
     
@@ -83,20 +73,3 @@ class ProductControllerIndexTest extends TestCase
     }
 }
 
-// 'products' => $products,
-//             'category' => $category,
-//             'categories' => Category::all(),
-//             'major_categories' => MajorCategory::all(),
-//             'major_category' => $major_category,
-//             'total_count' => $total_count,
-
-
-// 'products' => Product::where('category_id', 1)
-// ->orderBy('price', 'desc')
-// ->paginate(config('const.paginate')),
-// 'category' => Category::find(1),
-// 'categories' => Category::all(),
-// 'major_categories' => MajorCategory::all(),
-// 'major_category' => MajorCategory::find(1),
-// 'total_count' => Product::where('category_id', 1)
-// ->count(),

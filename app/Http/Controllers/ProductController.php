@@ -19,13 +19,7 @@ class ProductController extends Controller
      */
     public function index(Request $request)
     {
-        // 動作確認用
-        // $category_id = Category::where('id', $request->category);
-        // if($request->category !== null){
-        //     logger($id = $request->category);    
-        // }else{
-        //     logger('aaa');
-        // }
+    
         if($request->category !== null){
             $category_request = resolve(ProductIndexService::class)->excute(request()->only('category'));
             //　！！！！ブラウザでアクセス時のログ.log　はこれです。！！！！！
@@ -51,77 +45,7 @@ class ProductController extends Controller
             'total_count' => $total_count,
         ]);
         }
-       
-
-        
-        
-
-        // return view('product.index')->with($category_request);
-        // if($request->category !== null){
-        //     $products = Product::where('category_id', $request->category);
-        //     $total_count = Product::where('category_id', $request->category)
-        //         ->count();
-        //     $category = Category::find($request->category);
-        //     $major_category = MajorCategory::find($category->major_category_id);
-        // }else{
-        //     $products = new Product;
-        //     $total_count = "";
-        //     $category = null;
-        //     $major_category = null;
-        // }
-
-        // $products =Product::sortable()
-        //     ->orderBy('price', 'desc')
-        //     ->paginate(config('const.paginate'));
-                 
-            // return view('products.index')->with([
-            // 'products' => $products,
-            // 'category' => $category,
-            // 'categories' => Category::all(),
-            // 'major_categories' => MajorCategory::all(),
-            // 'major_category' => $major_category,
-            // 'total_count' => $total_count,
-            // ]);
-       
-        
     }
-    // public function index(Request $request){
-    
-        
-    //     $paginate = config('const.paginate');
-        
-    //     if($request->category !== null){
-    //         // whereテーブルから条件にあてはまるものを抽出
-    //         $products = Product::where('category_id', $request->category)
-    //             ->orderBy('price', 'desc')                
-    //             ->sortable()
-    //             ->paginate($paginate);
-    //         // Product::where('category_id',$request->category)の実行回数
-    //         $total_count = Product::where('category_id', $request->category)
-    //             ->count();
-    //         $category = Category::find($request->category);
-    //     }else{
-            
-    //         $products = Product::sortable()
-    //             ->orderBy('price', 'desc')
-    //             ->paginate($paginate);
-                         
-    //         $total_count = "";
-    //         $category = null;
-    //         // logger($products);
-    //         // dd();
-        
-    //     }
-
-        
-    //     $categories = Category::all();
-    //     // Categoryからmajor_category_namesのみ取り出す（pluck）　uniqueで重複部分を削除
-    //     $major_category_names = Category::pluck('major_category_name')
-    //         ->unique();
-      
-       
-    //     return view('products.index', compact('products', 'category','categories', 'major_category_names','total_count'));
-    // }
 
     /**
      * Show the form for creating a new resource.

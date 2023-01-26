@@ -13,7 +13,9 @@ class ProductIndexService
     {
         logger($data['category']);
         // if($data['category'] !== null){
-        $products = Product::where('category_id', $data['category']);
+        $products = Product::where('category_id', $data['category'])
+                                ->orderBy('price', 'desc')
+                                ->paginate(config('const.paginate'));
         $total_count = Product::where('category_id', $data['category'])
             ->count();
         $category = Category::find($data['category']);
@@ -25,9 +27,9 @@ class ProductIndexService
             // $major_category = null;
         // }
 
-        $products =Product::sortable()
-            ->orderBy('price', 'desc')
-            ->paginate(config('const.paginate'));
+        // $products =Product::sortable()
+        //     ->orderBy('price', 'desc')
+        //     ->paginate(config('const.paginate'));
 
         $category_request = [
             'products' => $products,

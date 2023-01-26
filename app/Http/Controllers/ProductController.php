@@ -20,12 +20,11 @@ class ProductController extends Controller
     public function index(Request $request)
     {
         // $category_id = Category::where('id', $request->category);
-        // if($request->category !== null){
-        //     logger($id = $request->category);    
-        // }else{
-        //     logger('aaa');
-        // }
-        
+        if($request->category !== null){
+            logger($id = $request->category);    
+        }else{
+            logger('aaa');
+        }
         if($request->category !== null){
             $category_request = resolve(ProductIndexService::class)->excute(request()->only('category'));
             

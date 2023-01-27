@@ -1,0 +1,146 @@
+[2023-01-27 12:35:27] local.DEBUG: 1  
+[2023-01-27 12:35:27] local.DEBUG: <!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="rVpZidYjhTkTAPDEWKPR74mqeyTw0DbJ4NORqfb2">
+    
+    <title>Laravel</title>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script type="module" src="http://[::1]:5173/@vite/client"></script><link rel="stylesheet" href="http://[::1]:5173/resources/sass/app.scss" /><script type="module" src="http://[::1]:5173/resources/js/app.js"></script>    <script src="https://kit.fontawesome.com/78e3d1f2a0.js" crossorigin="anonymous"></script>
+     <!-- Styles -->
+     <link href="http://localhost/laravel-samuraimart/public/css/samuraimart.css" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+     <nav class="navbar navbar-expand-md navbar-light shadow-sm samuraimart-header-container">
+  <div class="container">
+    <!--ホームへのリンク　ロゴマーク貼り付けてる  -->
+    <a class="navbar-brand" href="http://localhost/laravel-samuraimart/public">
+      <img src="http://localhost/laravel-samuraimart/public/img/logo.jpg">
+    </a>
+    <form class="row g-1">
+      <div class="col-auto">
+        <!--検索のテキストエリア　form-control でテキスト入力エリアを作れる？  -->
+        <input class="form-control samuraimart-header-search-input">
+      </div>
+      <div class="col-auto">
+        <!--検索ボタン　submitのbtm　<i class=....はFont Awesome の機能　虫眼鏡アイコン  -->
+        <button type="submit" class="btn samuraimart-header-search-button"><i class="fas fa-search samuraimart-header-search-icon"></i></button>
+      </div>
+    </form>
+    <!-- toggler　折りたたまれた時のボタン　jqueryの機能？？？ -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+ 
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Right Side Of Navbar　の装飾 -->
+      <ul class="navbar-nav ms-auto mr-5 mt-2">
+        <!-- Authentication Links -->
+        <!--ログインしてない場合の処理,-はログインしてるとき  -->
+                <li class="nav-item mr-5">
+          <a class="nav-link" href="http://localhost/laravel-samuraimart/public/users/mypage">
+            <i class="fas fa-user mr-1"></i><label>マイページ</label>
+          </a>
+        </li>
+        <li class="nav-item mr-5">
+          <a class="nav-link" href="http://localhost/laravel-samuraimart/public/users/mypage/favorite">
+            <i class="far fa-heart"></i>
+          </a>
+        </li>
+        <li class="nav-item mr-5">
+          <a class="nav-link" href="http://localhost/laravel-samuraimart/public/users/carts">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+        </li>
+              </ul>
+    </div>
+  </div>
+</nav>
+        <main class="py-4 mb-5">
+            <div class="row">
+    <div class="col-2">
+         <div class="container">
+            <h2>本</h2>
+                                    <label class="samuraimart-sidebar-category-label"><a href="http://localhost/laravel-samuraimart/public/products?category=1">ビジネス</a></label>
+                                                <label class="samuraimart-sidebar-category-label"><a href="http://localhost/laravel-samuraimart/public/products?category=2">文学・評論</a></label>
+                                                <label class="samuraimart-sidebar-category-label"><a href="http://localhost/laravel-samuraimart/public/products?category=3">人文・思想</a></label>
+                                                <label class="samuraimart-sidebar-category-label"><a href="http://localhost/laravel-samuraimart/public/products?category=4">スポーツ</a></label>
+                                                <label class="samuraimart-sidebar-category-label"><a href="http://localhost/laravel-samuraimart/public/products?category=5">コンピュータ・IT</a></label>
+                                                <label class="samuraimart-sidebar-category-label"><a href="http://localhost/laravel-samuraimart/public/products?category=6">資格・検定・就職</a></label>
+                                                <label class="samuraimart-sidebar-category-label"><a href="http://localhost/laravel-samuraimart/public/products?category=7">絵本・児童書</a></label>
+                                                <label class="samuraimart-sidebar-category-label"><a href="http://localhost/laravel-samuraimart/public/products?category=8">写真集</a></label>
+                                                <label class="samuraimart-sidebar-category-label"><a href="http://localhost/laravel-samuraimart/public/products?category=9">ゲーム攻略本</a></label>
+                                                <label class="samuraimart-sidebar-category-label"><a href="http://localhost/laravel-samuraimart/public/products?category=10">雑誌</a></label>
+                                                <label class="samuraimart-sidebar-category-label"><a href="http://localhost/laravel-samuraimart/public/products?category=11">アート・デザイン</a></label>
+                                                <label class="samuraimart-sidebar-category-label"><a href="http://localhost/laravel-samuraimart/public/products?category=12">ノンフィクション</a></label>
+                                                                                                                                                        <h2>コンピューター</h2>
+                                                                                                                                                                                                                                                                                    <label class="samuraimart-sidebar-category-label"><a href="http://localhost/laravel-samuraimart/public/products?category=13">ノートPC</a></label>
+                                                <label class="samuraimart-sidebar-category-label"><a href="http://localhost/laravel-samuraimart/public/products?category=14">デスクトップPC</a></label>
+                                                <label class="samuraimart-sidebar-category-label"><a href="http://localhost/laravel-samuraimart/public/products?category=15">タブレット</a></label>
+                                                                                            <h2>ディスプレイ</h2>
+                                                                                                                                                                                                                                                                                                                                                <label class="samuraimart-sidebar-category-label"><a href="http://localhost/laravel-samuraimart/public/products?category=16">19~20インチ</a></label>
+                                                <label class="samuraimart-sidebar-category-label"><a href="http://localhost/laravel-samuraimart/public/products?category=17">デスクトップPC</a></label>
+                                                <label class="samuraimart-sidebar-category-label"><a href="http://localhost/laravel-samuraimart/public/products?category=18">タブレット</a></label>
+                        </div>    </div>
+    <div class="col-9">
+        <div class="container">
+                          <a href="http://localhost/laravel-samuraimart/public/products">トップ</a> > <a href="#">本</a> > ビジネス
+              <h1>ビジネスの商品一覧2件</h1>
+                    </div>
+        <div>
+            Sort By
+            <!-- ソートするためのリンクを追加　第１引数カラム名、第2引数ビューに表示する文字列 -->
+            <a href="http://localhost/laravel-samuraimart/public/products?category=1&sort=id&direction=asc">ID</a> <i class="fa fa-sort"></i>            <a href="http://localhost/laravel-samuraimart/public/products?category=1&sort=price&direction=asc">Price</a> <i class="fa fa-sort"></i>        </div>
+        <div class="container mt-4">
+            <div class="row w-100">
+                                 <div class="col-3">
+                     <a href="http://localhost/laravel-samuraimart/public/products/8">
+                                                <img src="http://localhost/laravel-samuraimart/public/img/dummy.png" class="img-thumbnail">
+                                             </a>
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="samuraimart-product-label mt-2">
+                                 PHP 入門<br>
+                                 <label>￥1,000</label>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                                 <div class="col-3">
+                     <a href="http://localhost/laravel-samuraimart/public/products/21">
+                                                <img src="http://localhost/laravel-samuraimart/public/img/dummy.png" class="img-thumbnail">
+                                             </a>
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="samuraimart-product-label mt-2">
+                                 name1<br>
+                                 <label>￥1,000</label>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                             </div>
+        </div>
+         <!-- 「次のページへ」などのページ機能 -->
+         
+    </div>
+</div>
+         </main>
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm fixed-bottom mt-5">
+    <a class="navbar-brand mx-auto" href="http://localhost/laravel-samuraimart/public">
+        <img src="http://localhost/laravel-samuraimart/public/img/logo.jpg" class="img-fluid">
+    </a>
+</nav>    </div>
+</body>
+</html>
+  

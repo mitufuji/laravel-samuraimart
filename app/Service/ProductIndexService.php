@@ -28,7 +28,7 @@ class ProductIndexService
             'major_category' => $major_category,
             'total_count' => $total_count,
         ];
-        logger($category_request);
+        // logger($category_request);
 
         return $category_request;
     }

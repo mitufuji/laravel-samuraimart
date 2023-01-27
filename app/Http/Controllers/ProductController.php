@@ -23,7 +23,9 @@ class ProductController extends Controller
         if($request->category !== null){
             $category_request = resolve(ProductIndexService::class)->excute(request()->only('category'));
             //　！！！！ブラウザでアクセス時のログ.log　はこれです。！！！！！
-            logger($category_request);
+            // logger($category_request);
+            $html = view('products.index', with($category_request))->render();
+            logger($html);
             return view('products.index')->with($category_request);
         }else{
             // $request->category == nullの場合もサービスクラスに入れたかったのですが、$request->category = null　の状態でサービスクラスに渡す方法が分かりませんでした。

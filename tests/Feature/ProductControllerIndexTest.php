@@ -56,7 +56,7 @@ class ProductControllerIndexTest extends TestCase
         ];
         // 返り値の中身確認
         logger(7777);
-        // logger($category_request);
+        logger($category_request);
 
         $mock = \Mockery::mock(ProductIndexService::class)->makePartial();
         $mock->shouldReceive('excute')
@@ -67,8 +67,8 @@ class ProductControllerIndexTest extends TestCase
         $this->actingAs($user);
 
         $html = view('products.index')->render();
-        logger($html);    
-        
+        logger($html);
+    
         $response = $this->get(route('products.index'));
          // これも表示されない、ここまで来てないlogger(4444);
         $response->assertStatus(200);

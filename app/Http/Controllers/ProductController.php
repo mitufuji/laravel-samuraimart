@@ -30,9 +30,9 @@ class ProductController extends Controller
         }else{
             // $request->category == nullの場合もサービスクラスに入れたかったのですが、$request->category = null　の状態でサービスクラスに渡す方法が分かりませんでした。
             $products = new Product;
-                $total_count = "";
-                $category = null;
-                $major_category = null;
+            $total_count = "";
+            $category = null;
+            $major_category = null;
             $products =Product::sortable()
                 ->orderBy('price', 'desc')
                 ->paginate(config('const.paginate'));

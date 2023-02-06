@@ -19,34 +19,10 @@ class ProductController extends Controller
      */
     public function index(Request $request)
     {
-    
-        if($request->category !== null){
-            $category_request = resolve(ProductIndexService::class)->excute(request()->only('category'));
-            //　！！！！ブラウザでアクセス時のログ.log　はこれです。！！！！！
-            // logger($category_request);
-            $html = view('products.index', with($category_request))->render();
-            logger($html);
-            return view('products.index')->with($category_request);
-        }else{
-            // $request->category == nullの場合もサービスクラスに入れたかったのですが、$request->category = null　の状態でサービスクラスに渡す方法が分かりませんでした。
-            $products = new Product;
-            $total_count = "";
-            $category = null;
-            $major_category = null;
-            $products =Product::sortable()
-                ->orderBy('price', 'desc')
-                ->paginate(config('const.paginate'));
-        
-
-        return view('products.index')->with([
-            'products' => $products,
-            'category' => $category,
-            'categories' => Category::all(),
-            'major_categories' => MajorCategory::all(),
-            'major_category' => $major_category,
-            'total_count' => $total_count,
-        ]);
-        }
+        $category_request = resolve(ProductIndexService::class)
+            ->excute(request()->only('category'));
+            
+        return view('products.index')->with($category_request);        
     }
 
     /**

@@ -26,24 +26,23 @@ class ProductControllerIndexTest extends TestCase
      *
      * @return void
      */
-    public function test_request_なし()
+    public function test_category_id未指定()
     {
         $user = User::factory()->create();
         $this->actingAs($user);
 
         $response = $this->get(route('products.index'));
         $response->assertStatus(200);
-        logger(6666);
+        $response->assertViewHas(['total_count' => null]);
     }
 
-    public function test_request_あり()
+    public function test_category_id指定()
     {
-        // モックに期待する返り値作成
         $products = Product::where('category_id', 1)
-                                ->orderBy('price', 'desc')
-                                ->paginate(config('const.paginate'));
+            ->orderBy('price', 'desc')
+            ->paginate(config('const.paginate'));
         $total_count = Product::where('category_id', 1)
-                                ->count();
+            ->count();
         $category = Category::find(1);
         $major_category = MajorCategory::find($category->major_category_id);
         $category_request = [
@@ -54,25 +53,40 @@ class ProductControllerIndexTest extends TestCase
             'major_category' => $major_category,
             'total_count' => $total_count,
         ];
-        // 返り値の中身確認
-        logger(7777);
-        logger($category_request);
 
-        $mock = \Mockery::mock(ProductIndexService::class)->makePartial();
-        $mock->shouldReceive('excute')
-                 ->once()
-                 ->andReturn($category_request);
+        $user = User::factory()->create();
+        $this->actingAs($user);
+    
+        $response = $this->get('products?category=1');
+        $response->assertStatus(200);
+        $response->assertViewHas(['total_count' => $total_count]);
+    }
+
+    public function test_異常()
+    {
+        $products = Product::where('category_id', 1)
+            ->orderBy('price', 'desc')
+            ->paginate(config('const.paginate'));
+        $total_count = Product::where('category_id', 1)
+            ->count();
+        $category = Category::find(1);
+        $major_category = MajorCategory::find($category->major_category_id);
+        $category_request = [
+            'products' => $products,
+            'category' => null,
+            'categories' => Category::all(),
+            'major_categories' => MajorCategory::all(),
+            'major_category' => $major_category,
+            'total_count' => $total_count,
+        ];
 
         $user = User::factory()->create();
         $this->actingAs($user);
 
-        $html = view('products.index')->render();
-        logger($html);
-    
-        $response = $this->get(route('products.index'));
-         // これも表示されない、ここまで来てないlogger(4444);
-        $response->assertStatus(200);
-        $response->assertViewHas($category_request);
+        $response = $this->get('products?category=1');
+
+        $response->assertStatus(400);
+        $response->assertViewHas(['total_count' => $total_count]);
     }
 }
 

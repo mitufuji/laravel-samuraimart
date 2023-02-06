@@ -11,14 +11,24 @@ class ProductIndexService
 {
     public function excute(array $data)
     {
-        logger($data['category']);
-        $products = Product::where('category_id', $data['category'])
-                                ->orderBy('price', 'desc')
-                                ->paginate(config('const.paginate'));
-        $total_count = Product::where('category_id', $data['category'])
-                                ->count();
-        $category = Category::find($data['category']);
-        $major_category = MajorCategory::find($category->major_category_id);
+        if(isset($data['category']) !== false){
+            $products = Product::where('category_id', $data['category'])
+                ->orderBy('price', 'desc')
+                ->paginate(config('const.paginate'));
+            $total_count = Product::where('category_id', $data['category'])
+                ->count();
+            $category = Category::find($data['category']);
+            $major_category = MajorCategory::find($category->major_category_id);
+
+        }else{
+            $products = new Product;
+            $total_count = "";
+            $category = null;
+            $major_category = null;
+            $products = Product::sortable()
+                ->orderBy('price', 'desc')
+                ->paginate(config('const.paginate'));
+        }
 
         $category_request = [
             'products' => $products,
@@ -28,7 +38,6 @@ class ProductIndexService
             'major_category' => $major_category,
             'total_count' => $total_count,
         ];
-        // logger($category_request);
 
         return $category_request;
     }
